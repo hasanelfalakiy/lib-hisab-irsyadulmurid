@@ -5,10 +5,97 @@ package com.andihasan7.lib.irsyadulmurid
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
+import kotlin.math.abs
+import com.andihasan7.lib.irsyadulmurid.AwalBulan.IrsyadBulan
+import com.andihasan7.lib.irsyadulmurid.WaktuSholat.IrsyadSholat
+import com.andihasan7.lib.irsyadulmurid.round
 
 class LibraryTest {
-    @Test fun someLibraryMethodReturnsTrue() {
-        val classUnderTest = Library()
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
+    @Test fun testAwalBulan() {
+        /* val classUnderTest = Library()
+        assertTrue(classUnderTest, "someLibraryMethod should return 'true'")
+        */
+        
+            // DD° MM` SS,ss`` dibulatkan ke 2 angka di belakang koma
+	        fun toDegreeFullRound2(decimal: Double): String {
+    	        var degree = abs(decimal).toInt().toString()
+    	        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
+    	        var second = ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+
+                // Tambahkan nol sebelum angka yang kurang dari 10
+                degree = degree.padStart(2, '0')
+                minute = minute.padStart(2, '0')
+                second = second.padStart(2, '0')
+                
+                if (decimal < 0) {
+                    degree = "-$degree"
+                }
+
+    	        return "$degree\u00B0 $minute\u2032 $second\u2033"
+	        }
+
+	        val bln = 10
+            val thn = 1426
+            val lat = -7.43333333334 //-7.476111111 // -7.183333333
+            val long = 111.43333333334 //111.313055556 // 113.25
+            val tZ = 7
+            val tt = 150
+            val check = true
+    
+            val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
+            
+            /* println("Prediksi = ${b.awalBulanPrediksi()}")
+            println("JD Ijtima = ${b.jdIjtima()}")
+            println("TGL = ${b.tanggal()}") // variable vrTGLFix
+            println("BLN = ${b.bulanString()}")
+            println("THN = ${b.tahun()}")
+            println("Hari = ${b.hari()}")
+            println("Pasaran = ${b.pasaran()}")
+            println("Ijtima' = ${toDegreeFullRound2(b.ijtimaWD())}")
+            println("Maghrib = ${toDegreeFullRound2(b.maghribFinal())}")
+            println("Azimuth Matahari = ${toDegreeFullRound2(b.azimuthMatahariUTSB())}")
+            println("T Hilal Hakiki = ${toDegreeFullRound2(b.tinggiHakiki())}")
+            println("T Hilal Mar'i Upper = ${toDegreeFullRound2(b.tinggiUpper())}")
+            println("T Hilal Mar'i Center = ${toDegreeFullRound2(b.tinggiCenter())}")
+            println("T Hilal Mar'i Lower = ${toDegreeFullRound2(b.tinggiLower())}")
+            println("Azimuth Bulan = ${toDegreeFullRound2(b.azimuthHilalUTSB())}")
+            println("Posisi Hilal = ${toDegreeFullRound2(b.posisiHilal())}")
+            println("Posisi Hilal String = ${b.posisiHilalString()}")
+            println("Lama Hilal = ${toDegreeFullRound2(b.lamaHilal())}")
+            println("Elongasi = ${toDegreeFullRound2(b.elongasi())}")
+            println("Nurul Hilal= ${b.nurulHilal()}")
+            println("Ghurub Hilal= ${toDegreeFullRound2(b.ghurubHilal())}")
+            println("Samkul Hilal= ${b.samkulHilal()}")
+            */
+            
+            val tgl = 30
+            val m = 7
+            val th = 2023
+            val ith = 2
+            
+            val s = IrsyadSholat(tgl, m, th, lat, long, tZ, tt, ith)
+            
+            println("Imsak = ${toDegreeFullRound2(s.imsak())}")
+            println("Shubuh = ${toDegreeFullRound2(s.shubuh())}")
+            println("Terbit = ${toDegreeFullRound2(s.thulu())}")
+            println("Dluha = ${toDegreeFullRound2(s.dluha())}")
+            println("Dzuhur = ${toDegreeFullRound2(s.dzuhur())}")
+            println("Ashar = ${toDegreeFullRound2(s.ashar())}")
+            println("Maghrib = ${toDegreeFullRound2(s.maghrib())}")
+            println("Isya = ${toDegreeFullRound2(s.isya())}")
+            println("T Malam = ${toDegreeFullRound2(s.tengahMalam())}")
+            
+            println("Deklinasi = ${toDegreeFullRound2(s.deklinasi())}")
+            println("EoT = ${toDegreeFullRound2(s.equationOfTime())}")
+            println("Semi Diameter = ${toDegreeFullRound2(s.semiDiameter())}")
+            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblat())}")
+            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblatUTSB())}")
+            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblat())}")
+            println("Rashdul Qiblat 1 = ${toDegreeFullRound2(s.rashdul1())}")
+            println("Rashdul Qiblat 2 = ${toDegreeFullRound2(s.rashdul2())}")
+            println("Selisih Jam Markaz ~ Makkah = ${toDegreeFullRound2(s.selisihJam())}")
+            println("Jarak Markaz ~ Makkah = ${s.jarakKeduanya()} Km")
+            println("S Deklinasi ~ L Ka'bah = ${toDegreeFullRound2(s.selisihLintangK())}")
+            println("S Deklinasi ~ L Tempat = ${toDegreeFullRound2(s.selisihLintangT())}")
     }
 }
