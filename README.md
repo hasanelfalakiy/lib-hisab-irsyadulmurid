@@ -11,7 +11,7 @@
 <!-- Latest release -->
 <img src="https://img.shields.io/github/v/release/andihasan97/lib-hisab-irsyadulmurid?include_releases&label=latest%20release&style=for-the-badge&color=brightgreen" alt="latest_release"/>
 <!-- Jitpack release -->
-<img src="https://jitpack.io/v/andihasan97/lib-hisab-irsyadulmurid.svg?style=for-the-badge" alt="jitpack_release">
+<img src="https://img.shields.io/jitpack/v/andihasan97/lib-hisab-irsyadulmurid.svg?style=for-the-badge&color=brightgreen" alt="jitpack_release">
 <!-- Github Repo size -->
 <img src="https://img.shields.io/github/repo-size/andihasan97/lib-hisab-irsyadulmurid?style=for-the-badge">
 <!-- Build with Kotlin -->
