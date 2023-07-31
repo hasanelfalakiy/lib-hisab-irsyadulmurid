@@ -67,6 +67,99 @@ implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:$version_release'
 
 ## Cara menggunakan
 
+Sebagian besar nilai kembalian nya berupa Double, untuk merubah ke format derajat menit detik (DMS)/ jam menit detik (HMS) silahkan gunakan library konversi yang sudah saya buat disini : https://github.com/andihasan97/lib-konversi
+
+1. Hisab Waktu Sholat
+```kotlin.kt
+// input nilai dimasukkan ke constructor class
+class IrsyadSholat(
+  val date: Int,
+  val month: Int,
+  val year: Int,
+  val latitude: Double,
+  val longitude: Double,
+  val timeZone: Number,
+  val elevation: Number,
+  val ihthiyati: Int
+  ) {}
+
+// buat objek class
+val s = IrsyadSholat(date, month, year, latitude, longitude, timeZone, elevation, ihthiyati)
+
+// panggil function yang ada diclass IrsyadSholat()
+val imsak = s.imsak() // Double waktu sholat imsak
+// dan seterusnya
+
+// daftar function di class IrsyadSholat()
+// Imsak WD
+fun imsak(): Double
+    
+// Shubuh WD
+fun shubuh(): Double
+    
+// Thulu' WD
+fun thulu(): Double
+    
+// Dluha WD
+fun dluha(): Double
+    
+// Dzuhur WD
+fun dzuhur(): Double
+    
+// Ashar WD
+fun ashar(): Double
+    
+// Maghrib WD
+fun maghrib(): Double
+    
+// Isya' WD
+fun isya(): Double
+    
+// Tengah Malam WD
+fun tengahMalam(): Double
+	
+// fungsi getDeklinasi
+fun deklinasi(): Double
+	
+// fungsi getEquationOfTime
+fun equationOfTime(): Double
+    
+// fungsi semidiameter
+fun semiDiameter(): Double
+	
+// fungsi Arah Qiblat B-U/B-S
+fun qiblat(): Double
+	
+// fungsi Arah Qiblat UTSB
+fun qiblatUTSB(): Double
+	
+// fungsi Rashdul Qiblat 1
+fun rashdul1(): Double
+	
+// fungsi Rashdul Qiblat 2
+fun rashdul2(): Double
+    
+// Selisih Jam antara Markaz ~ Makkah
+fun selisihJam(): Double
+    
+// Jarak antara Markaz ~ Makkah (kilometer)
+fun jarakKeduanya(): Double
+    
+// selisih deklinasi dengan Lintang Ka'bah
+fun selisihLintangK(): Double
+    
+// selisih deklinasi dengan Lintang Tempat
+fun selisihLintangT(): Double
+
+```
+
+2. Hisab Awal Bulan Hijriyah
+
+```kotlin.kt
+
+
+```
+
 ## License
 
 ```
