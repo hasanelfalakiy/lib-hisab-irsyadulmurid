@@ -7,6 +7,13 @@
   <b>Library Hisab metode Kitab Irsyadul Murid</b>
 <p><br>
 
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/andihsan97/lib-hisab-irsyadulmurid?include_releases&amp;label=latest%20release&style=for-the-badge&color=green" alt="Latest release">
+  <img src="https://img.shields.io/github/repo-size/andihasan97/lib-hisab-irsyadulmurid?style=for-the-badge&color=green" alt="repo size">
+  <img src="https://img.shields.io/badge/Kotlin-C116E3?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin">
+  <img src="https://img.shields.io/github/license/andihasan97/lib-hisab-irsyadulmurid?color=blue&style=for-the-badge" alt="License"></p>
+</p>
+
 ## Fitur
 
 - [x] Hisab Awal Waktu Sholat
