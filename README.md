@@ -235,6 +235,8 @@ fun nurulHilal(): Double
 fun ghurubHilal(): Double
 // Samkul Hilal
 fun samkulHilal(): Double
+// Umur Hilal
+fun umurHilal(): Double
     
     
 // Deklinasi Matahari
