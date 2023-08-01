@@ -260,7 +260,7 @@ fun trueDistanceKM(): Double
 
 ## Ingin berkontribusi?
 
-> Jika Anda ingin berkontribusi,silahkan menggarpu (Fork) repositori ini, buat perubahan, kirim Pull request ke repositori ini
+> Jika Anda ingin berkontribusi, silahkan menggarpu (Fork) repositori ini, buat perubahan, kirim Pull request ke repositori ini
 
 ## Kontak Kami
 
