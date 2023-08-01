@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/IrsyadBulan.kt",
       "selection": {
         "end": {
-          "column": 49,
+          "column": 34,
           "index": -1,
-          "line": 13
+          "line": 302
         },
         "start": {
-          "column": 49,
+          "column": 34,
           "index": -1,
-          "line": 13
+          "line": 302
         }
       }
     },
@@ -19,14 +19,59 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 27,
+          "column": 21,
           "index": -1,
-          "line": 88
+          "line": 36
         },
         "start": {
-          "column": 27,
+          "column": 21,
           "index": -1,
-          "line": 88
+          "line": 36
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts",
+      "selection": {
+        "end": {
+          "column": 1,
+          "index": -1,
+          "line": 24
+        },
+        "start": {
+          "column": 1,
+          "index": -1,
+          "line": 24
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/settings.gradle.kts",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": -1,
+          "line": 0
         }
       }
     }
