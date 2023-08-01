@@ -218,6 +218,13 @@ class IrsyadBulan(
     val vrFI = (1 + cos(Math.toRadians(vrFla))) / 2
     // Ms, Ghurub Hilal
     val vrMs = maghribFix + vrDc
+    // Umur Hilal
+    val vruH =
+    	if (check == true) {
+        	maghribFix - vrWIWD
+        } else {
+        	24 + (maghribFix - vrWIWD) // umur hilal dihitung dari Ijtima sampai matahari terbenam, ikut bertambah saat sehari setelah Ijtima
+        }
     
     // Perkiraan Awal Bulan
     // Jika T Hilal Mar'i Center lebih atau sama dengan 2, maka besok Bulan baru, jika tidak, maka 2 hari lagi
@@ -292,6 +299,8 @@ class IrsyadBulan(
     fun ghurubHilal(): Double = vrMs
     // Samkul Hilal
     fun samkulHilal(): Double = vrCw
+    // Umur Hilal
+    fun umurHilal(): Double = vruH
     
     
     // Deklinasi Matahari
