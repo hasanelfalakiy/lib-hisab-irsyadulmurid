@@ -127,7 +127,12 @@ class IrsyadBulan(
     // Azimuth Matahari
     val vrAM = Math.toDegrees(atan(-sin(Math.toRadians(latitude)) / tan(Math.toRadians(vrt)) + cos(Math.toRadians(latitude)) * tan(Math.toRadians(vrDekM)) / sin(Math.toRadians(vrt))))
     // Azimuth Matahari UTSB
-    val vrAMUTSB = vrAM + 270
+    val vrAMUTSB =
+        if (vrt < 180) {
+        	vrAM + 270
+        } else {
+        	vrAM + 90
+        }
     // Jarak pusat Bumi ke pusat Matahari satuan AU
     val vrRau = (1.00014 - 0.01671 * cos(Math.toRadians(vrmM)) - 0.00014 * cos(Math.toRadians(2 * vrmM))).round(9)
     // satuan KM
@@ -184,7 +189,12 @@ class IrsyadBulan(
     // Azimuth Hilal
     val vrAzc_ = Math.toDegrees(atan(-sin(Math.toRadians(latitude)) / tan(Math.toRadians(vrtc)) + cos(Math.toRadians(latitude)) * tan(Math.toRadians(vrDekc)) / sin(Math.toRadians(vrtc))))
     // Azimuth Hilal UTSB
-    val vrAzc = vrAzc_ + 270
+    val vrAzc =
+        if (vrtc < 180) {
+        	vrAzc_ + 270
+        } else {
+        	vrAzc_ + 90
+        }
     // z, Posisi Hilal
     val vrz = vrAzc - vrAMUTSB
     // Posisi Hilal String
