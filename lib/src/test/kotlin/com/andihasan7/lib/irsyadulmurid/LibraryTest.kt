@@ -44,7 +44,7 @@ class LibraryTest {
     
             val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
             
-            /* println("Prediksi = ${b.awalBulanPrediksi()}")
+            println("Prediksi = ${b.awalBulanPrediksi()}")
             println("JD Ijtima = ${b.jdIjtima()}")
             println("TGL = ${b.tanggal()}") // variable vrTGLFix
             println("BLN = ${b.bulanString()}")
@@ -66,8 +66,9 @@ class LibraryTest {
             println("Nurul Hilal= ${b.nurulHilal()}")
             println("Ghurub Hilal= ${toDegreeFullRound2(b.ghurubHilal())}")
             println("Samkul Hilal= ${b.samkulHilal()}")
-            */
+            println("Umur Hilal= ${toDegreeFullRound2(b.umurHilal())}")
             
+            /*
             val tgl = 30
             val m = 7
             val th = 2023
@@ -97,5 +98,6 @@ class LibraryTest {
             println("Jarak Markaz ~ Makkah = ${s.jarakKeduanya()} Km")
             println("S Deklinasi ~ L Ka'bah = ${toDegreeFullRound2(s.selisihLintangK())}")
             println("S Deklinasi ~ L Tempat = ${toDegreeFullRound2(s.selisihLintangT())}")
+            */
     }
 }
