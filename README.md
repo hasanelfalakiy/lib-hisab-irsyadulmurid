@@ -75,14 +75,14 @@ Sebagian besar nilai kembalian nya berupa Double, untuk merubah ke format deraja
 ```kotlin.kt
 // input nilai dimasukkan ke constructor class
 class IrsyadSholat(
-  val date: Int,
-  val month: Int,
-  val year: Int,
-  val latitude: Double,
-  val longitude: Double,
-  val timeZone: Number,
-  val elevation: Number,
-  val ihthiyati: Int
+    val date: Int,
+    val month: Int,
+    val year: Int,
+    val latitude: Double,
+    val longitude: Double,
+    val timeZone: Number,
+    val elevation: Number,
+    val ihthiyati: Int
   ) {}
 
 // buat objek class
@@ -158,9 +158,113 @@ fun selisihLintangT(): Double
 2. Hisab Awal Bulan Hijriyah
 
 ```kotlin.kt
+// input nilai dimasukkan ke constructor class
+class IrsyadBulan(
+    val month: Number,
+    val year: Number,
+    val latitude: Double,
+    val longitude: Double,
+    val timeZone: Number,
+    val elevation: Number,
+    val check: Boolean) {}
 
+// buat objek class
+val b = IrsyadBulan(month, year, latitude, longitude, timeZone, elevation, check) // check : jika true maka hari ijtima', jika false maka sehari setelah ijtima'
+
+/*
+Perhatian! Jika menghitung sehari setelah Ijtima' maka Hari Pasaran Tanggal Bulan Tahun Maghrib dll akan menyesuaikan penambahan hari, sementara jam Ijtima tetap
+*/
+
+// panggil function yang ada diclass IrsyadBulan()
+val jdIjtima = b.jdIjtima() // Double jam ijtima
+// dan seterusnya
+
+/*
+daftar function di class IrsyadBulan()
+*/
+
+// Prediksi awal bulan
+fun awalBulanPrediksi(): String
+// JD Ijtima
+fun jdIjtima(): Double
+// Ijtima UT/ GMT
+fun ijtimaUT(): Double
+// Ijtima Waktu Daerah (WIB, WIT, WITA, dll)
+fun ijtimaWD(): Double
+// Tanggal
+fun tanggal(): Int
+// Bulan String
+fun bulanString(): String
+// Tahun
+fun tahun(): Int
+// Hari
+fun hari(): String
+// Pasaran 
+fun pasaran(): String
+    
+// Maghrib terkoreksi
+fun maghribFinal(): Double
+// Azimuth Matahari, jika positif utara titik barat, jika negative selatan titik barat, dihitung dari titik barat
+fun azimuthMatahari(): Double
+// Azimuth Matahari UTSB
+fun azimuthMatahariUTSB(): Double
+
+// Tinggi Hilal Hakiki
+fun tinggiHakiki(): Double
+// Tinggi Hilal Mar'i upper
+fun tinggiUpper(): Double
+// Tinggi Hilal Mar'i center
+fun tinggiCenter(): Double
+// Tinggi Hilal Mar'i lower
+fun tinggiLower(): Double
+// Azimuth Hilal, jika positif utara titik barat, jika negative selatan titik barat, dihitung dari titik barat
+fun azimuthHilal(): Double
+// Azimuth Hilal UTSB
+fun azimuthHilalUTSB(): Double
+// Posisi Hilal, jika positif utara matahari, jika negative selatan matahari
+fun posisiHilal(): Double
+// Posisi Hilal String
+fun posisiHilalString(): String
+// Muktsul Hilal/lama Hilal (HMS)
+fun lamaHilal(): Double
+// Elongasi
+fun elongasi(): Double
+// Nurul Hilal
+fun nurulHilal(): Double
+// Ghurub Hilal
+fun ghurubHilal(): Double
+// Samkul Hilal
+fun samkulHilal(): Double
+    
+    
+// Deklinasi Matahari
+fun deklinasiMatahari(): Double
+// Equation of Time Matahari
+fun equationMatahari(): Double
+// Semidiameter Matahari
+fun semidiameterMatahari(): Double
+// Deklinasi Bulan
+fun deklinasiBulan(): Double
+// Semidiameter Bulan
+fun semidiameterBulan(): Double
+// RightAscension Matahari 
+fun ascensionRectaMatahari(): Double
+// RightAscension Bulan 
+fun ascensionRectaBulan(): Double
+// True Distance Obliquity AU
+fun trueDistanceAU(): Double
+// True Distance Obliquity KM
+fun trueDistanceKM(): Double
 
 ```
+
+## Ingin berkontribusi?
+
+> Jika Anda ingin berkontribusi,silahkan menggarpu (Fork) repositori ini, buat perubahan, kirim Pull request ke repositori ini
+
+## Kontak Kami
+
+- [Telegram](https://t.me/moonelfalakiy)
 
 ## License
 
