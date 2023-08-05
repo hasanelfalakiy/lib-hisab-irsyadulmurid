@@ -235,7 +235,7 @@ class IrsyadBulan(
         	vrJDIjtima + 2
         }
         
-    val prediksi = TanggalHarpas(jdPrediksi, 0.0)
+    val prediksi = TanggalHarpas(jdPrediksi, vrWIwd)
     val tglPrediksi = prediksi.fnTGL()
     val blnPrediksi = prediksi.fnBLNString()
     val thnPrediksi = prediksi.fnTHN()
