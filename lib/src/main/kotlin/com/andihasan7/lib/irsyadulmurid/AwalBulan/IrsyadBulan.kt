@@ -27,14 +27,9 @@ class IrsyadBulan(
     // Hisab Ijtima`
     val bujurDaerah = timeZone.toDouble() * 15
     
-    // JD Ijtima', disini nanti pengecekan sehari setelah Ijtima'
-    // Jika true maka hari itu juga, jika false satu hari setelah Ijtima'
-    val vrJDIjtima =
-    	if (check == true) {
-        	HisabIjtima.hisabIjtima(month, year)
-        } else {
-        	HisabIjtima.hisabIjtima(month, year) + 1
-        }
+    // JD Ijtima'
+    val vrJDIjtima = HisabIjtima.hisabIjtima(month, year)
+    
     // Waktu Ijtima UT/ GMT
     val vrWI = (vrJDIjtima).mod(1.0) * 24 // frac(vrJDIjtima) x 24
     // Waktu Ijtima sebelum kondisi > 24
@@ -86,8 +81,14 @@ class IrsyadBulan(
     val vrBh = 2 - ((vrYear).toDouble() / 100).toInt() + (((vrYear).toDouble() / 100).toInt().toDouble() / 4).toInt()
     // JD
     val vrJDh = (365.25 * (vrYear + 4716)).toInt() + (30.6001 * (vrMonth + 1)).toInt() + vrTGLFix + ((maghribAwwal - (timeZone).toDouble()) / 24) + vrBh - 1524.5
-    // T hisab hilal
-    val vrTh = (vrJDh - 2451545) / 36525
+    // T hisab hilal, disini nanti pengecekan sehari setelah Ijtima'
+    // Jika true maka hari itu juga, jika false satu hari setelah Ijtima'
+    val vrTh =
+        if (check == true) {
+            (vrJDh - 2451545) / 36525
+        } else {
+            ((vrJDh + 1) - 2451545) / 36525
+        }
     
     
     // Data Matahari
@@ -242,13 +243,13 @@ class IrsyadBulan(
     val hariPrediksi = prediksi.hari()
     val pasaranPrediksi = prediksi.pasaran()
     
+    // Prediksi
     fun awalBulanPrediksi(): String =
-    	if (check == true) {
-    		"$hariPrediksi $pasaranPrediksi, $tglPrediksi $blnPrediksi $thnPrediksi"
+        if (check == true) {
+        	"$hariPrediksi $pasaranPrediksi, $tglPrediksi $blnPrediksi $thnPrediksi"
         } else {
         	"Beralihlah ke saat Ijtima'"
         }
-    
     // JD Ijtima
     fun jdIjtima(): Double = vrJDIjtima
     // Ijtima UT/ GMT

@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/IrsyadBulan.kt",
       "selection": {
         "end": {
-          "column": 34,
+          "column": 36,
           "index": -1,
-          "line": 302
+          "line": 250
         },
         "start": {
-          "column": 34,
+          "column": 36,
           "index": -1,
-          "line": 302
+          "line": 250
         }
       }
     },
@@ -19,62 +19,17 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 21,
+          "column": 28,
           "index": -1,
-          "line": 36
+          "line": 42
         },
         "start": {
-          "column": 21,
+          "column": 28,
           "index": -1,
-          "line": 36
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts",
-      "selection": {
-        "end": {
-          "column": 1,
-          "index": -1,
-          "line": 24
-        },
-        "start": {
-          "column": 1,
-          "index": -1,
-          "line": 24
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/settings.gradle.kts",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": -1,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": -1,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": -1,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": -1,
-          "line": 0
+          "line": 42
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/IrsyadBulan.kt"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt"
 }

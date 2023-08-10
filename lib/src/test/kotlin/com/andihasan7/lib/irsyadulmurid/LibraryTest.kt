@@ -34,8 +34,8 @@ class LibraryTest {
     	        return "$degree\u00B0 $minute\u2032 $second\u2033"
 	        }
 
-	        val bln = 10
-            val thn = 1426
+	        val bln = 9
+            val thn = 1445
             val lat = -7.43333333334 //-7.476111111 // -7.183333333
             val long = 111.43333333334 //111.313055556 // 113.25
             val tZ = 7
