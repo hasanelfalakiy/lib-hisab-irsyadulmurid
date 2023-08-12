@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
       "selection": {
         "end": {
-          "column": 0,
+          "column": 27,
           "index": -1,
-          "line": 0
+          "line": 309
         },
         "start": {
-          "column": 0,
+          "column": 27,
           "index": -1,
-          "line": 0
+          "line": 309
         }
       }
     },
@@ -29,7 +29,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/TahwilTarikh/TahwilTarikh.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md"
 }

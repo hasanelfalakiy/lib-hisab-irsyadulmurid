@@ -306,6 +306,8 @@ jTH[2] // String Tahun
 
 // Julian Day ke Hari & Pasaran
 val harpas = TahwilTarikh().jdToHarpas(jd: Double): Array<String>
+harpas[0] // String Hari
+harpas[1] // String Pasaran
 
 ```
 
