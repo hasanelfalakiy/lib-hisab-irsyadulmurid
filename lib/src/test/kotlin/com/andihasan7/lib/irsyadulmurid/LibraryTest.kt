@@ -9,6 +9,7 @@ import kotlin.math.abs
 import com.andihasan7.lib.irsyadulmurid.AwalBulan.IrsyadBulan
 import com.andihasan7.lib.irsyadulmurid.WaktuSholat.IrsyadSholat
 import com.andihasan7.lib.irsyadulmurid.round
+import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.TahwilTarikh
 
 class LibraryTest {
     @Test fun testAwalBulan() {
@@ -34,7 +35,7 @@ class LibraryTest {
     	        return "$degree\u00B0 $minute\u2032 $second\u2033"
 	        }
 
-	        val bln = 9
+	        val bln = 1
             val thn = 1445
             val lat = -7.43333333334 //-7.476111111 // -7.183333333
             val long = 111.43333333334 //111.313055556 // 113.25
@@ -99,5 +100,21 @@ class LibraryTest {
             println("S Deklinasi ~ L Ka'bah = ${toDegreeFullRound2(s.selisihLintangK())}")
             println("S Deklinasi ~ L Tempat = ${toDegreeFullRound2(s.selisihLintangT())}")
             */
+    }
+    @Test
+    fun testTahwil() {
+        
+        val tgl = 1
+        val bln = 1
+        val thn = 1
+        
+        val mTH = TahwilTarikh().hijriToMiladi(tgl, bln, thn)
+        val hari = mTH[0]
+        val pasaran = mTH[1]
+        val tanggal = mTH[2]
+        val bulan = mTH[3]
+        val tahun = mTH[4]
+        
+        println("$hari $pasaran, $tanggal $bulan $tahun")
     }
 }
