@@ -1,5 +1,7 @@
 package com.andihasan7.lib.irsyadulmurid.AwalBulan
 
+import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.NumberToString
+
 class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
 	// Z
     val vrZ = vrJDIjtima.toInt()
@@ -37,24 +39,8 @@ class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
         	vrE - 13
         }
         
-    val vrBLNString =
-    	when (vrBLNFix) {
-        	1 -> "Januari"
-            2 -> "Februari"
-            3 -> "Maret"
-            4 -> "April"
-            5 -> "Mei"
-            6 -> "Juni"
-            7 -> "Juli"
-            8 -> "Agustus"
-            9 -> "September"
-            10 -> "Oktober"
-            11 -> "November"
-            12 -> "Desember"
-            else -> "Desember"
-        }
     fun fnBLN(): Int = vrBLNFix // Bulan Int
-    fun fnBLNString(): String = vrBLNString // Bulan String
+    fun fnBLNString(): String = NumberToString.numberJanuari(vrBLNFix) // Bulan String
     // THN
     val vrTHN =
     	if (vrBLNFix > 2.5) {
@@ -75,29 +61,9 @@ class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
         }
     // Hari
     val hari = vrPAFix - ((vrPAFix).toDouble() / 7).toInt() * 7
-    val hariFix = 
-    	when (hari) {
-        	1 -> "Ahad"
-            2 -> "Senin"
-            3 -> "Selasa"
-            4 -> "Rabu"
-            5 -> "Kamis"
-            6 -> "Jum`at"
-            7 -> "Sabtu"
-            else -> "Sabtu"
-        }
-    fun hari(): String = hariFix // Hari
+    fun hari(): String = NumberToString.numberAhad(hari) // Hari
     
     // Pasaran 
     val pasaran = vrPAFix - ((vrPAFix).toDouble() / 5).toInt() * 5
-    val pasaranFix =
-    	when (pasaran) {
-        	1 -> "Kliwon"
-            2 -> "Legi"
-            3 -> "Pahing"
-            4 -> "Pon"
-            5 -> "Wage"
-            else -> "Wage"
-        }
-    fun pasaran(): String = pasaranFix
+    fun pasaran(): String = NumberToString.numberKliwon(pasaran)
 }
