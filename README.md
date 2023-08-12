@@ -28,10 +28,10 @@ Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh
 
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
+- [x] Tahwil Tarikh
 
 ## Fitur yang akan datang
 
-- [ ] Tahwil Tarikh
 - [ ] Fase-fase Bulan
 - [ ] Gerhana Matahari
 - [ ] Gerhana Bulan
@@ -257,6 +257,55 @@ fun ascensionRectaBulan(): Double
 fun trueDistanceAU(): Double
 // True Distance Obliquity KM
 fun trueDistanceKM(): Double
+
+```
+
+3. Tahwil Tarikh
+
+```kotlin.kt
+
+// Miladi/Masehi ke Hijriyah
+// Jika tidak ingin input Jam & TimeZone, masukkan saja tanggal, bulan, tahun
+val mTH = TahwilTarikh().miladiToHijri(date: Int, month: Int, year: Int, hour: Double = 0.0, timeZone: Double = 0.0): Array<String>
+mTH[0] // String Hari
+mTH[1] // String Pasaran
+mTH[2] // String Tanggal
+mTH[3] // String Bulan
+mTH[4] // String Tahun
+
+// Hijriyah ke Miladi/Masehi
+
+val mTH = TahwilTarikh().hijriToMiladi(date: Int, month: Int, year: Int): Array<String>
+mTH[0] // String Hari
+mTH[1] // String Pasaran
+mTH[2] // String Tanggal
+mTH[3] // String Bulan
+mTH[4] // String Tahun
+
+// Anda juga bisa menggunakan methode yang lain
+// Miladi ke Julian Day (JD)
+// masukkan saja tanggal, bulan, tahun jika tidak ingin input jam & timezone
+val mTJ = TarikhToJD.miladiToJD(date: Int, month: Int, year: Int, hour: Double = 0.0, timeZone: Double = 0.0): Double
+mTJ // Double Julian Day
+
+// Hijri ke Julian Day (JD)
+val hTJ = TarikhToJD.hijriToJD(date: Int, month: Int, year: Int): Double
+hTJ // Double Julian Day
+
+// Julian Day ke Miladi/Masehi
+val jTM = JDToTarikh.jdToMiladi(jd: Double): Array<String>
+jTM[0] // String Tanggal
+jTM[1] // String Bulan
+jTM[2] // String Tahun
+
+// Julian Day ke Hijriyah
+val jTH = JDToTarikh.jdToHijri(jd: Double): Array<String>
+jTH[0] // String Tanggal
+jTH[1] // String Bulan
+jTH[2] // String Tahun
+
+// Julian Day ke Hari & Pasaran
+val harpas = TahwilTarikh().jdToHarpas(jd: Double): Array<String>
 
 ```
 

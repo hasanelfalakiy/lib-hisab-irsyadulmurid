@@ -1,35 +1,35 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
       "selection": {
         "end": {
-          "column": 20,
+          "column": 0,
           "index": -1,
-          "line": 37
+          "line": 0
         },
         "start": {
-          "column": 20,
+          "column": 0,
           "index": -1,
-          "line": 37
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 110,
+          "column": 0,
           "index": -1,
-          "line": 289
+          "line": 0
         },
         "start": {
-          "column": 110,
+          "column": 0,
           "index": -1,
-          "line": 289
+          "line": 0
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts"
 }
