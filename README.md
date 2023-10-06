@@ -29,6 +29,7 @@ Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
+- [x] Umum
 
 ## Fitur yang akan datang
 
@@ -308,6 +309,23 @@ jTH[2] // String Tahun
 val harpas = TahwilTarikh().jdToHarpas(jd: Double): Array<String>
 harpas[0] // String Hari
 harpas[1] // String Pasaran
+
+```
+4. Umum
+```kotlin.kt
+
+// menghitung hari selamatan orang meninggal
+// perhitungan ini tidak berdasarkan visibilitas hilal
+
+val jdMng = Umum.selamatan(jd: Double) DoubleArray // menggunakan julian day masehi ke hijriyah
+
+val hariMeninggal = jdMng[0] // sama nilai input
+val pendhak7 = jdMng[1] // 7 hari setelah meninggal 
+val pendhak40 = jdMng[2] // 40 hari
+val pendhak100 = jdMng[3] // 100 hari
+val pendhakPisan = jdMng[4] // Satu tahun dalam hijriyah
+val pendhakPindho = jdMng[5] // Dua tahun dalam hijriyah
+val pendhakSewu = jdMng[6] // 1000 hari
 
 ```
 
