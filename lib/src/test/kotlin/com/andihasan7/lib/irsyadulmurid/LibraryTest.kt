@@ -10,6 +10,7 @@ import com.andihasan7.lib.irsyadulmurid.AwalBulan.IrsyadBulan
 import com.andihasan7.lib.irsyadulmurid.WaktuSholat.IrsyadSholat
 import com.andihasan7.lib.irsyadulmurid.round
 import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.TahwilTarikh
+import com.andihasan7.lib.irsyadulmurid.Umum.Umum
 
 class LibraryTest {
     @Test fun testAwalBulan() {
@@ -116,5 +117,31 @@ class LibraryTest {
         val tahun = mTH[4]
         
         println("$hari $pasaran, $tanggal $bulan $tahun")
+    }
+    
+    @Test
+    fun testSelamatan() {
+    
+        val jd = 2453485.5
+    
+        val s = Umum.selamatan(jd)
+    
+        val self = s[0]
+        val p7 = s[1]
+        val p40 = s[2]
+        val p100 = s[3]
+        val p1 = s[4]
+        val p2 = s[5]
+        val sewu = s[6]
+    
+    
+        println("$self")
+        println("$p7")
+        println("$p40")
+        println("$p100")
+        println("$p1")
+        println("$p2")
+        println("$sewu")
+    
     }
 }
