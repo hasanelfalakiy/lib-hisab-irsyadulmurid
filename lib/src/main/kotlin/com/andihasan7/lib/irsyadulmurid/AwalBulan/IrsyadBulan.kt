@@ -236,7 +236,11 @@ class IrsyadBulan(
         	"Selatan Matahari"
         }
     // Dc, Lama Hilal
-    val vrDc = (vrPTcFix - vrPTMFix) / 15
+    val vrDc = if (vrPTcFix < vrPTMFix) {
+    	((vrPTcFix + 360.0) - vrPTMFix) / 15
+    } else {
+    	(vrPTcFix - vrPTMFix) / 15
+    }
     // AL
     val vrAL = Math.toDegrees(acos(cos(Math.toRadians(abs(vrhcu - vrh))) * cos(Math.toRadians(abs(vrz)))))
     // Cw, Samkul Hilal
@@ -248,7 +252,7 @@ class IrsyadBulan(
     // FI, Nurul Hilal
     val vrFI = (1 + cos(Math.toRadians(vrFla))) / 2
     // Ms, Ghurub Hilal
-    val vrMs = maghribFix + vrDc
+    val vrMs = (maghribFix + vrDc).mod(24.0)
     // Umur Hilal
     val vruH =
     	if (check == true) {
