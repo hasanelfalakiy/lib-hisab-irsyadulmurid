@@ -9,8 +9,14 @@ class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
     val vrAA = ((vrZ - 1867216.25) / 36524.25).toInt()
     // A
     val vrA = vrZ + 1 + vrAA - ((vrAA).toDouble() / 4).toInt()
+    // A Fix
+    val vrAFix = if (z < 2299161) {
+    	z
+    } else {
+    	vrA
+    }
     // B
-    val vrB = vrA + 1524
+    val vrB = vrAFix + 1524
     // C
     val vrC = ((vrB - 122.1) / 365.25).toInt()
     // D
