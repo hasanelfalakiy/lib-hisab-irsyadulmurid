@@ -95,8 +95,16 @@ class IrsyadBulan(
         	vrTHN
         }
         
+    // koreksi sebelum gregorius, support hitung sebelum 15 oktober 1582
+    val kBTDeci = (vrYear).toDouble() + (vrMonth).toDouble() / 100 + (vrTGLFix).toDouble() / 10000
+        
     // B    
-    val vrBh = 2 - ((vrYear).toDouble() / 100).toInt() + (((vrYear).toDouble() / 100).toInt().toDouble() / 4).toInt()
+    val vrBh = if (kBTDeci < 1582.1015) {
+    	0
+    } else {
+    	2 - ((vrYear).toDouble() / 100).toInt() + (((vrYear).toDouble() / 100).toInt().toDouble() / 4).toInt()
+    }
+    
     // JD
     val vrJDh = ((365.25 * (vrYear + 4716)).toInt() + (30.6001 * (vrMonth + 1)).toInt() + vrTGLFix + ((maghribAwwal - (timeZone).toDouble()) / 24) + vrBh - 1524.5).round(3)
     // T hisab hilal, disini nanti pengecekan sehari setelah Ijtima'
