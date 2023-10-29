@@ -9,8 +9,8 @@ object HisabIjtima {
         // HY
         val vrHY =
             year.toDouble() +
-                (((month.toDouble() - 1) * 29.53) /
-                    354.3671) // penambahan: bulan - 1 agar input untuk bulan saat itu
+                ((month.toDouble() * 29.53) /
+                    354.3671)
         // K
         val vrK = round((vrHY - 1410) * 12).toInt()
         // T

@@ -27,8 +27,26 @@ class IrsyadBulan(
     // Hisab Ijtima`
     val bujurDaerah = timeZone.toDouble() * 15
     
+    // penambahan: bulan - 1 agar input untuk bulan saat itu
+    val kBln = month.toInt() - 1
+    
+    // koreksi bulan fix
+    val kBlnFix = if (kBln == 0) {
+    	12
+    } else {
+    	kBln
+    }
+    
+    // koreksi tahun
+    val kThnFix = if (kBln == 0) {
+    	year.toInt() - 1
+    } else {
+    	year.toInt()
+    }
+    
+    
     // JD Ijtima'
-    val vrJDIjtima = HisabIjtima.hisabIjtima(month, year)
+    val vrJDIjtima = HisabIjtima.hisabIjtima(kBlnFix, kThnFix)
     
     // Waktu Ijtima UT/ GMT
     val vrWI = (vrJDIjtima).mod(1.0) * 24 // frac(vrJDIjtima) x 24
