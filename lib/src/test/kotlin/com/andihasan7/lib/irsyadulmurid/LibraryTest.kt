@@ -11,30 +11,34 @@ import com.andihasan7.lib.irsyadulmurid.WaktuSholat.IrsyadSholat
 import com.andihasan7.lib.irsyadulmurid.round
 import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.TahwilTarikh
 import com.andihasan7.lib.irsyadulmurid.Umum.Umum
+import com.andihasan7.lib.irsyadulmurid.MoonPhases.MoonPhases
 
 class LibraryTest {
+
+    // DD° MM` SS,ss`` dibulatkan ke 2 angka di belakang koma
+	fun toDegreeFullRound2(decimal: Double): String {
+    	var degree = abs(decimal).toInt().toString()
+    	var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
+    	var second = ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        degree = degree.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+        second = second.padStart(2, '0')
+                
+        if (decimal < 0) {
+            degree = "-$degree"
+        }
+
+    	return "$degree\u00B0 $minute\u2032 $second\u2033"
+	}
+            
     @Test fun testAwalBulan() {
         /* val classUnderTest = Library()
         assertTrue(classUnderTest, "someLibraryMethod should return 'true'")
         */
         
-            // DD° MM` SS,ss`` dibulatkan ke 2 angka di belakang koma
-	        fun toDegreeFullRound2(decimal: Double): String {
-    	        var degree = abs(decimal).toInt().toString()
-    	        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
-    	        var second = ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
-
-                // Tambahkan nol sebelum angka yang kurang dari 10
-                degree = degree.padStart(2, '0')
-                minute = minute.padStart(2, '0')
-                second = second.padStart(2, '0')
-                
-                if (decimal < 0) {
-                    degree = "-$degree"
-                }
-
-    	        return "$degree\u00B0 $minute\u2032 $second\u2033"
-	        }
+            
 
 	        val bln = 9
             val thn = 1445
@@ -143,5 +147,27 @@ class LibraryTest {
         println("$p2")
         println("$sewu")
     
+    }
+    @Test
+    fun testNewMoon() {
+        // new moon
+        val bNM = 9
+        val thNM = 1445
+        val tZN = 7
+    
+        val n = MoonPhases(bNM, thNM, tZN)
+        val dUT = n.doubleNewMoonUT
+        val dWD = n.doubleNewMoonWD
+        
+        println("NewMoonUT = ${toDegreeFullRound2(dUT)}")
+        println("NewMoonWD = ${toDegreeFullRound2(dWD)}")
+        println("hari int = ${n.intHariNewMoon}")
+        println("pasaran int = ${n.intPasaranNewMoon}")
+        println("tanggal int = ${n.intTanggalNewMoon}")
+        println("bulan int = ${n.intBulanNewMoon}")
+        println("tahun int = ${n.intTahunNewMoon}")
+        println("hari string = ${n.stringHariNewMoon}")
+        println("pasaran string = ${n.stringPasaranNewMoon}")
+        println("bulan string = ${n.stringBulanNewMoon}")
     }
 }
