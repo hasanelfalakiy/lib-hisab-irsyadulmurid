@@ -36,13 +36,13 @@ class LibraryTest {
     	        return "$degree\u00B0 $minute\u2032 $second\u2033"
 	        }
 
-	        val bln = 1
+	        val bln = 9
             val thn = 1445
-            val lat = -7.43333333334 //-7.476111111 // -7.183333333
-            val long = 111.43333333334 //111.313055556 // 113.25
+            val lat = -7.464141667 //-7.43333333334 //-7.476111111 // -7.183333333
+            val long = 111.145825 //111.43333333334 //111.313055556 // 113.25
             val tZ = 7
-            val tt = 150
-            val check = true
+            val tt = 202
+            val check = false
     
             val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
             
