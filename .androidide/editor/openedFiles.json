@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 29,
+          "index": 1754,
+          "line": 44
+        },
+        "start": {
+          "column": 29,
+          "index": 1754,
+          "line": 44
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt"
+}
