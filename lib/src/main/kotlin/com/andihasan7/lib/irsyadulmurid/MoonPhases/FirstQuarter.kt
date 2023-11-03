@@ -14,8 +14,8 @@ class FirstQuarter(val month: Int, val year: Int, timeZone: Number) {
     val vrK1 = round((vrHY - 1410) * 12)
     val vrK2 = vrK1 - 0.75
     val vrT = vrK2 / 1200
-    // JD diround 3
-    val vrJD = (2447740.652 + 29.53058868 * vrK2 + 0.0001178 * vrT.pow(2)).round(3)
+    // JD
+    val vrJD = 2447740.652 + 29.53058868 * vrK2 + 0.0001178 * vrT.pow(2)
     // fungsi frac digantikan dengan mod
     val vrM = (((207.9587074 + 29.10535608 * vrK2 + -0.0000333 * vrT.pow(2)) / 360) * 360).mod(360.0)
     val vrM1 = (((111.1791307 + 385.81691806 * vrK2 + 0.0107306 * vrT.pow(2)) / 360) * 360).mod(360.0)

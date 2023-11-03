@@ -14,8 +14,8 @@ class FullMoon(val month: Int, val year: Int, timeZone: Number) {
     val vrK = (((vrHY - 1410) * 12) - 0.5).round(1)
     // T
     val vrT = vrK.toDouble() / 1200.0
-    // JD diround 3
-    val vrJD = (2447740.652 + 29.53058868 * vrK + 0.0001178 * vrT.pow(2)).round(3)
+    // JD
+    val vrJD = 2447740.652 + 29.53058868 * vrK + 0.0001178 * vrT.pow(2)
     // M
     val vrM = (((207.9587074 + 29.10535608 * vrK + -0.0000333 * vrT.pow(2)) / 360.0) * 360).mod(360.0)
     // M'
