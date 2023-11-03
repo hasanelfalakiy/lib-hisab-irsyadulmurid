@@ -89,4 +89,33 @@ class MoonPhases(val month: Int, val year: Int, val timeZone: Number) {
     val stringPasaranFull = _fullMoon.pasaranFullString
     // bulan string
     val stringBulanFull = _fullMoon.bulanFullString
+    
+    
+    /*
+    	Last Moon/Tarbi' Tsani
+    */
+    val _lastMoon = LastQuarter(month, year, timeZone)
+    
+    // Jam Last Moon UT double
+    val doubleLastUT = _lastMoon.vrWLUT
+    // Jam Last Moon Waktu Daerah
+    val doubleLastWD = _lastMoon.vrWLFWD
+    
+    // hari Int dihitung dari Ahad/Minggu
+    val intHariLast = _lastMoon.hariLastInt
+    // pasaran Int dihitung dari Kliwon
+    val intPasaranLast = _lastMoon.pasaranLastInt
+    // tanggal Int
+    val intTanggalLast = _lastMoon.tanggalLastInt
+    // bulan Int
+    val intBulanLast = _lastMoon.bulanLastInt // Bulan Int
+    // tahun Int
+    val intTahunLast = _lastMoon.tahunLastInt
+	
+    // hari string
+    val stringHariLast = _lastMoon.hariLastString
+    // pasaran string
+    val stringPasaranLast = _lastMoon.pasaranLastString
+    // bulan string
+    val stringBulanLast = _lastMoon.bulanLastString
 }
