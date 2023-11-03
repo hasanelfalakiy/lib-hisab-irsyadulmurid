@@ -40,13 +40,13 @@ class LibraryTest {
         
             
 
-	        val bln = 9
-            val thn = 1445
+	        val bln = 10
+            val thn = 1443
             val lat = -7.464141667 //-7.43333333334 //-7.476111111 // -7.183333333
             val long = 111.145825 //111.43333333334 //111.313055556 // 113.25
             val tZ = 7
             val tt = 202
-            val check = false
+            val check = true
     
             val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
             
@@ -151,8 +151,8 @@ class LibraryTest {
     @Test
     fun testNewMoon() {
         // new moon
-        val bNM = 9
-        val thNM = 1445
+        val bNM = 10
+        val thNM = 1443
         val tZN = 7
     
         val n = MoonPhases(bNM, thNM, tZN)
