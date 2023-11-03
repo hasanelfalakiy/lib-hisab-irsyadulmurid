@@ -40,8 +40,8 @@ class LibraryTest {
         
             
 
-	        val bln = 10
-            val thn = 1443
+	        val bln = 9
+            val thn = 1445
             val lat = -7.464141667 //-7.43333333334 //-7.476111111 // -7.183333333
             val long = 111.145825 //111.43333333334 //111.313055556 // 113.25
             val tZ = 7
@@ -50,6 +50,7 @@ class LibraryTest {
     
             val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
             
+            println(" ")
             println("Prediksi = ${b.awalBulanPrediksi()}")
             println("JD Ijtima = ${b.jdIjtima()}")
             println("TGL = ${b.tanggal()}") // variable vrTGLFix
@@ -73,6 +74,7 @@ class LibraryTest {
             println("Ghurub Hilal= ${toDegreeFullRound2(b.ghurubHilal())}")
             println("Samkul Hilal= ${b.samkulHilal()}")
             println("Umur Hilal= ${toDegreeFullRound2(b.umurHilal())}")
+            println(" ")
             
             /*
             val tgl = 30
@@ -119,8 +121,9 @@ class LibraryTest {
         val tanggal = mTH[2]
         val bulan = mTH[3]
         val tahun = mTH[4]
-        
+        println(" ")
         println("$hari $pasaran, $tanggal $bulan $tahun")
+        println(" ")
     }
     
     @Test
@@ -137,8 +140,8 @@ class LibraryTest {
         val p1 = s[4]
         val p2 = s[5]
         val sewu = s[6]
-    
-    
+        
+        println(" ")
         println("$self")
         println("$p7")
         println("$p40")
@@ -146,19 +149,20 @@ class LibraryTest {
         println("$p1")
         println("$p2")
         println("$sewu")
+        println(" ")
     
     }
     @Test
     fun testNewMoon() {
         // new moon
-        val bNM = 10
-        val thNM = 1443
+        val bNM = 9
+        val thNM = 1445
         val tZN = 7
     
         val n = MoonPhases(bNM, thNM, tZN)
         val dUT = n.doubleNewMoonUT
         val dWD = n.doubleNewMoonWD
-        
+        println(" ")
         println("NewMoonUT = ${toDegreeFullRound2(dUT)}")
         println("NewMoonWD = ${toDegreeFullRound2(dWD)}")
         println("hari int = ${n.intHariNewMoon}")
@@ -169,6 +173,7 @@ class LibraryTest {
         println("hari string = ${n.stringHariNewMoon}")
         println("pasaran string = ${n.stringPasaranNewMoon}")
         println("bulan string = ${n.stringBulanNewMoon}")
+        println(" ")
     }
     
     @Test
@@ -181,7 +186,7 @@ class LibraryTest {
         val n = MoonPhases(bNM, thNM, tZN)
         val dUT = n.doubleFirstUT
         val dWD = n.doubleFirstWD
-        
+        println(" ")
         println("FirstQuarterUT = ${toDegreeFullRound2(dUT)}")
         println("FirstQuarterWD = ${toDegreeFullRound2(dWD)}")
         println("hari int = ${n.intHariFirst}")
@@ -192,6 +197,7 @@ class LibraryTest {
         println("hari string = ${n.stringHariFirst}")
         println("pasaran string = ${n.stringPasaranFirst}")
         println("bulan string = ${n.stringBulanFirst}")
+        println(" ")
     }
     
     @Test
@@ -204,6 +210,7 @@ class LibraryTest {
         val n = MoonPhases(bNM, thNM, tZF)
         val dUT = n.doubleFullUT
         val dWD = n.doubleFullWD
+        println(" ")
         println("FullMoonUT = ${toDegreeFullRound2(dUT)}")
         println("FullMoonWD = ${toDegreeFullRound2(dWD)}")
         println("hari int = ${n.intHariFull}")
@@ -214,5 +221,30 @@ class LibraryTest {
         println("hari string = ${n.stringHariFull}")
         println("pasaran string = ${n.stringPasaranFull}")
         println("bulan string = ${n.stringBulanFull}")
+        println(" ")
+    }
+    
+    @Test
+    fun testLastQuarter() {
+        // last quarter
+        val bNM = 9
+        val thNM = 1426
+        val tZF = 7
+    
+        val n = MoonPhases(bNM, thNM, tZF)
+        val dUT = n.doubleLastUT
+        val dWD = n.doubleLastWD
+        println(" ")
+        println("LastUT = ${toDegreeFullRound2(dUT)}")
+        println("LastWD = ${toDegreeFullRound2(dWD)}")
+        println("hari int = ${n.intHariLast}")
+        println("pasaran int = ${n.intPasaranLast}")
+        println("tanggal int = ${n.intTanggalLast}")
+        println("bulan int = ${n.intBulanLast}")
+        println("tahun int = ${n.intTahunLast}")
+        println("hari string = ${n.stringHariLast}")
+        println("pasaran string = ${n.stringPasaranLast}")
+        println("bulan string = ${n.stringBulanLast}")
+        println(" ")
     }
 }

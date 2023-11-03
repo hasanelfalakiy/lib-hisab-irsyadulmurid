@@ -4,77 +4,17 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 26,
-          "index": 1492,
-          "line": 43
+          "column": 20,
+          "index": 5612,
+          "line": 125
         },
         "start": {
-          "column": 26,
-          "index": 1492,
-          "line": 43
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/FirstQuarter.kt",
-      "selection": {
-        "end": {
-          "column": 9,
-          "index": 500,
-          "line": 16
-        },
-        "start": {
-          "column": 9,
-          "index": 500,
-          "line": 16
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/FullMoon.kt",
-      "selection": {
-        "end": {
-          "column": 9,
-          "index": 484,
-          "line": 16
-        },
-        "start": {
-          "column": 9,
-          "index": 484,
-          "line": 16
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/LastQuarter.kt",
-      "selection": {
-        "end": {
-          "column": 15,
-          "index": 511,
-          "line": 17
-        },
-        "start": {
-          "column": 15,
-          "index": 511,
-          "line": 17
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/HisabIjtima.kt",
-      "selection": {
-        "end": {
-          "column": 75,
-          "index": 598,
-          "line": 19
-        },
-        "start": {
-          "column": 75,
-          "index": 598,
-          "line": 19
+          "column": 20,
+          "index": 5612,
+          "line": 125
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/HisabIjtima.kt"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt"
 }
