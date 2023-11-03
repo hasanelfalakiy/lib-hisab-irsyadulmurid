@@ -170,4 +170,27 @@ class LibraryTest {
         println("pasaran string = ${n.stringPasaranNewMoon}")
         println("bulan string = ${n.stringBulanNewMoon}")
     }
+    
+    @Test
+    fun testFirstQuarter() {
+        // new moon
+        val bNM = 9
+        val thNM = 1426
+        val tZN = 7
+    
+        val n = MoonPhases(bNM, thNM, tZN)
+        val dUT = n.doubleFirstUT
+        val dWD = n.doubleFirstWD
+        
+        println("FirstUT = ${toDegreeFullRound2(dUT)}")
+        println("FirstWD = ${toDegreeFullRound2(dWD)}")
+        println("hari int = ${n.intHariFirst}")
+        println("pasaran int = ${n.intPasaranFirst}")
+        println("tanggal int = ${n.intTanggalFirst}")
+        println("bulan int = ${n.intBulanFirst}")
+        println("tahun int = ${n.intTahunFirst}")
+        println("hari string = ${n.stringHariFirst}")
+        println("pasaran string = ${n.stringPasaranFirst}")
+        println("bulan string = ${n.stringBulanFirst}")
+    }
 }
