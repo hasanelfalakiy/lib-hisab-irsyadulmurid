@@ -3,6 +3,7 @@ package com.andihasan7.lib.irsyadulmurid.AwalBulan
 import kotlin.math.sin
 import kotlin.math.pow
 import kotlin.math.round
+import com.andihasan7.lib.irsyadulmurid.round
 
 object HisabIjtima {
     fun hisabIjtima(month: Number, year: Number): Double {
@@ -15,8 +16,8 @@ object HisabIjtima {
         val vrK = round((vrHY - 1410) * 12).toInt()
         // T
         val vrT = vrK.toDouble() / 1200.0
-        // JD
-        val vrJD = 2447740.652 + 29.53058868 * vrK + 0.0001178 * vrT.pow(2)
+        // JD diround 3
+        val vrJD = (2447740.652 + 29.53058868 * vrK + 0.0001178 * vrT.pow(2)).round(3)
         // M
         val vrM =
             (((207.9587074 + 29.10535608 * vrK + -0.0000333 * vrT.pow(2)) / 360.0) * 360).mod(360.0)

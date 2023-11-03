@@ -3,7 +3,7 @@ package com.andihasan7.lib.irsyadulmurid.MoonPhases
 class MoonPhases(val month: Int, val year: Int, val timeZone: Number) {
 	
     /*
-    	NewMoon/Ijtima
+    	NewMoon/Ijtima'
     */
     val _newMoon = NewMoon(month, year, timeZone)
     
@@ -33,7 +33,7 @@ class MoonPhases(val month: Int, val year: Int, val timeZone: Number) {
     
     
     /*
-    	First Quarter
+    	First Quarter/Tarbi' Awwal
     */
     val _firstQuarter = FirstQuarter(month, year, timeZone)
     
