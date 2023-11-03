@@ -1,17 +1,17 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/FirstQuarter.kt",
       "selection": {
         "end": {
-          "column": 1,
-          "index": 1245,
-          "line": 33
+          "column": 50,
+          "index": 261,
+          "line": 8
         },
         "start": {
-          "column": 1,
-          "index": 1245,
-          "line": 33
+          "column": 50,
+          "index": 261,
+          "line": 8
         }
       }
     },
@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/MoonPhases.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 1032,
-          "line": 39
+          "column": 6,
+          "index": 1024,
+          "line": 36
         },
         "start": {
-          "column": 0,
-          "index": 1032,
-          "line": 39
+          "column": 6,
+          "index": 1024,
+          "line": 36
         }
       }
     },
@@ -34,32 +34,17 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/NewMoon.kt",
       "selection": {
         "end": {
-          "column": 51,
-          "index": 51,
+          "column": 0,
+          "index": 0,
           "line": 0
         },
         "start": {
-          "column": 8,
-          "index": 8,
+          "column": 0,
+          "index": 0,
           "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/IrsyadBulan.kt",
-      "selection": {
-        "end": {
-          "column": 49,
-          "index": 395,
-          "line": 13
-        },
-        "start": {
-          "column": 7,
-          "index": 353,
-          "line": 13
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/MoonPhases.kt"
 }
