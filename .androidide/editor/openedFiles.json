@@ -1,51 +1,6 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/FirstQuarter.kt",
-      "selection": {
-        "end": {
-          "column": 50,
-          "index": 261,
-          "line": 8
-        },
-        "start": {
-          "column": 50,
-          "index": 261,
-          "line": 8
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/MoonPhases/MoonPhases.kt",
-      "selection": {
-        "end": {
-          "column": 6,
-          "index": 1024,
-          "line": 36
-        },
-        "start": {
-          "column": 6,
-          "index": 1024,
-          "line": 36
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
-      "selection": {
-        "end": {
-          "column": 61,
-          "index": 544,
-          "line": 13
-        },
-        "start": {
-          "column": 61,
-          "index": 544,
-          "line": 13
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/TanggalHarpas.kt",
       "selection": {
         "end": {
@@ -59,7 +14,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 26,
+          "index": 1492,
+          "line": 43
+        },
+        "start": {
+          "column": 26,
+          "index": 1492,
+          "line": 43
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/TanggalHarpas.kt"
 }

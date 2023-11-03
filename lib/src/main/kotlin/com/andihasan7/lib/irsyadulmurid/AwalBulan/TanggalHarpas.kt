@@ -4,7 +4,11 @@ import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.NumberToString
 
 class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
 	// Z
-    val vrZ = vrJDIjtima.toInt()
+    val vrZ = if (vrWIwd > 24) {
+    		vrJDIjtima.toInt() + 1
+    	} else {
+        	vrJDIjtima.toInt()
+        }
     // AA
     val vrAA = ((vrZ - 1867216.25) / 36524.25).toInt()
     // A
@@ -24,15 +28,8 @@ class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
     // E
     val vrE = ((vrB - vrD).toDouble() / 30.6001).toInt()
     // TGL
-    val vrTGL = (vrB - vrD - (30.6001 * vrE).toInt()).toInt()
-    // jika Ijtima > 24 maka hari berikutnya 
-    // TGL FIX
-    val vrTGLFix = 
-    	if (vrWIwd > 24) {
-    		vrTGL + 1
-    	} else {
-        	vrTGL
-        }
+    val vrTGLFix = (vrB - vrD - (30.6001 * vrE).toInt()).toInt()
+    
     fun fnTGL(): Int = vrTGLFix // Tanggal
     // BLN
     val vrBLN = vrE - 1
@@ -57,14 +54,8 @@ class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
     fun fnTHN(): Int = vrTHN // Tahun
     
     // PA
-    val vrPA = vrZ + 2
-    // PA FIX
-    val vrPAFix = 
-    	if (vrWIwd > 24) {
-        	vrPA + 1
-        } else {
-        	vrPA
-        }
+    val vrPAFix = vrZ + 2
+    
     // Hari
     val hari = vrPAFix - ((vrPAFix).toDouble() / 7).toInt() * 7
     fun hari(): String = NumberToString.numberAhad(hari) // Hari
