@@ -182,8 +182,8 @@ class LibraryTest {
         val dUT = n.doubleFirstUT
         val dWD = n.doubleFirstWD
         
-        println("FirstUT = ${toDegreeFullRound2(dUT)}")
-        println("FirstWD = ${toDegreeFullRound2(dWD)}")
+        println("FirstQuarterUT = ${toDegreeFullRound2(dUT)}")
+        println("FirstQuarterWD = ${toDegreeFullRound2(dWD)}")
         println("hari int = ${n.intHariFirst}")
         println("pasaran int = ${n.intPasaranFirst}")
         println("tanggal int = ${n.intTanggalFirst}")
@@ -192,5 +192,27 @@ class LibraryTest {
         println("hari string = ${n.stringHariFirst}")
         println("pasaran string = ${n.stringPasaranFirst}")
         println("bulan string = ${n.stringBulanFirst}")
+    }
+    
+    @Test
+    fun testFullMoon() {
+        // full moon
+        val bNM = 8
+        val thNM = 1425
+        val tZF = 7
+    
+        val n = MoonPhases(bNM, thNM, tZF)
+        val dUT = n.doubleFullUT
+        val dWD = n.doubleFullWD
+        println("FullMoonUT = ${toDegreeFullRound2(dUT)}")
+        println("FullMoonWD = ${toDegreeFullRound2(dWD)}")
+        println("hari int = ${n.intHariFull}")
+        println("pasaran int = ${n.intPasaranFull}")
+        println("tanggal int = ${n.intTanggalFull}")
+        println("bulan int = ${n.intBulanFull}")
+        println("tahun int = ${n.intTahunFull}")
+        println("hari string = ${n.stringHariFull}")
+        println("pasaran string = ${n.stringPasaranFull}")
+        println("bulan string = ${n.stringBulanFull}")
     }
 }
