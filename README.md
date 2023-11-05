@@ -22,7 +22,11 @@
 
 ## Tentang Kitab Irsyadul Murid
 
-Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh terbitan Ponpes Al-Mubarok Lanbulan Madura Jawa Timur, termasuk kitab hisab kontemporer/ modern untuk mengetahui pergerakan/posisi benda-benda langit sebagai keperluan ibadah umat Islam dengan keakuratan tinggi.
+Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh terbitan Ponpes Al-Mubarok Lanbulan Madura Jawa Timur, termasuk kitab hisab kontemporer/modern untuk mengetahui pergerakan/posisi benda-benda langit sebagai keperluan ibadah umat Islam dengan keakuratan tinggi.
+
+## Perhatian!
+
+Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para ahli mau mengoreksi dan para pelajar yang ingin mempelajari dipersilakan.
   
 ## Fitur
 
