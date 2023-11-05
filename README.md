@@ -26,6 +26,7 @@ Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh
   
 ## Fitur
 
+- [x] Fase-fase Bulan
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
@@ -33,7 +34,6 @@ Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh
 
 ## Fitur yang akan datang
 
-- [ ] Fase-fase Bulan
 - [ ] Gerhana Matahari
 - [ ] Gerhana Bulan
 
@@ -326,6 +326,110 @@ val pendhak100 = jdMng[3] // 100 hari
 val pendhakPisan = jdMng[4] // Satu tahun dalam hijriyah
 val pendhakPindho = jdMng[5] // Dua tahun dalam hijriyah
 val pendhakSewu = jdMng[6] // 1000 hari
+
+```
+5. Fase-fase bulan/Moon Phases
+```kotlin.kt
+
+// Contoh penggunaan
+
+/*
+    New Moon/Ijtima'
+*/
+val bulan = 9
+val tahun = 1445
+val timeZone = 7
+    
+val n = MoonPhases(bulan, tahun, timeZone)
+val newMoonUT = n.doubleNewMoonUT // jam UT, tipe Double
+val newMoonWD = n.doubleNewMoonWD // jam lokal/waktu daerah, tipe Double
+        
+val hari = n.intHariNewMoon // hari Int dihitung dari Ahad/Minggu
+val pasaran = n.intPasaranNewMoon // pasaran Int dihitung dari Kliwon
+val tanggal = n.intTanggalNewMoon // Int
+val bulan = n.intBulanNewMoon // Int
+val tahun = n.intTahunNewMoon // Int
+val hariString = n.stringHariNewMoon // String
+val pasaranString = n.stringPasaranNewMoon // String
+val bulanString = n.stringBulanNewMoon // String
+
+/*
+    First Quarter/Tarbi' Awwal
+*/
+// Jam First Quarter UT double
+n.doubleFirstUT
+// Jam First Quarter Waktu Daerah
+n.doubleFirstWD
+    
+// hari Int
+n.intHariFirst
+// pasaran Int
+n.intPasaranFirst
+// tanggal Int
+n.intTanggalFirst
+// bulan Int
+n.intBulanFirst
+// tahun Int
+n.intTahunFirst
+	
+// hari string
+n.stringHariFirst
+// pasaran string
+n.stringPasaranFirst
+// bulan string
+n.stringBulanFirst
+
+/*
+    Full Moon/Istiqbal
+*/
+// Jam Full Moon UT double
+n.doubleFullUT
+// Jam Full Moon Waktu Daerah
+n.doubleFullWD
+    
+// hari Int
+n.intHariFull
+// pasaran Int
+n.intPasaranFull
+// tanggal Int
+n.intTanggalFull
+// bulan Int
+n.intBulanFull
+// tahun Int
+n.intTahunFull
+	
+// hari string
+n.stringHariFull
+// pasaran string
+n.stringPasaranFull
+// bulan string
+n.stringBulanFull
+
+/*
+    Last Moon/Tarbi' Tsani
+*/
+// Jam Last Moon UT double
+n.doubleLastUT
+// Jam Last Moon Waktu Daerah
+n.doubleLastWD
+    
+// hari Int
+n.intHariLast
+// pasaran Int
+n.intPasaranLast
+// tanggal Int
+n.intTanggalLast
+// bulan Int
+n.intBulanLast
+// tahun Int
+n.intTahunLast
+	
+// hari string
+n.stringHariLast
+// pasaran string
+n.stringPasaranLast
+// bulan string
+n.stringBulanLast
 
 ```
 
