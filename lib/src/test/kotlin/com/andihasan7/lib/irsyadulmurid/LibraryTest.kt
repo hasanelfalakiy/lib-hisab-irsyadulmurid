@@ -12,6 +12,7 @@ import com.andihasan7.lib.irsyadulmurid.round
 import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.TahwilTarikh
 import com.andihasan7.lib.irsyadulmurid.Umum.Umum
 import com.andihasan7.lib.irsyadulmurid.MoonPhases.MoonPhases
+import com.andihasan7.lib.irsyadulmurid.GerhanaBulan.IrsyadGerhanaBulan
 
 class LibraryTest {
 
@@ -37,9 +38,6 @@ class LibraryTest {
         /* val classUnderTest = Library()
         assertTrue(classUnderTest, "someLibraryMethod should return 'true'")
         */
-        
-            
-
 	        val bln = 9
             val thn = 1445
             val lat = -7.464141667 //-7.43333333334 //-7.476111111 // -7.183333333
@@ -246,5 +244,40 @@ class LibraryTest {
         println("pasaran string = ${n.stringPasaranLast}")
         println("bulan string = ${n.stringBulanLast}")
         println(" ")
+    }
+    
+    @Test
+    fun testIrsyadGerhanaBulan() {
+        val b = IrsyadGerhanaBulan(3, 1447, 7)
+    
+        val h = 0.0
+        println(b.jenisGerhana)
+        //println(h)
+        //println(toDegreeFullRound2(h))
+        println("")
+        println("hari, pasaran : ${b.hariString} ${b.pasaranString} ${b.hariInt} ${b.pasaranInt}")
+        println("tanggal bulan tahun : ${b.tanggalInt} ${b.bulanInt} ${b.bulanString} ${b.tahunInt}")
+        println("awal penumbra  : ${toDegreeFullRound2(b.awalPenumbraUT)}")
+        println("awal umbra     : ${toDegreeFullRound2(b.awalUmbraUT)}")
+        println("awal total     : ${toDegreeFullRound2(b.awalTotalUT)}")
+        println("tengah gerhana : ${toDegreeFullRound2(b.tengahGerhanaUT)}")
+        println("akhir total    : ${toDegreeFullRound2(b.akhirTotalUT)}")
+        println("akhir umbra    : ${toDegreeFullRound2(b.akhirUmbraUT)}")
+        println("akhir penumbra : ${toDegreeFullRound2(b.akhirPenumbraUT)}")
+        println("")
+        println("awal penumbra  : ${toDegreeFullRound2(b.awalPenumbraWD)}")
+        println("awal umbra     : ${toDegreeFullRound2(b.awalUmbraWD)}")
+        println("awal total     : ${toDegreeFullRound2(b.awalTotalWD)}")
+        println("tengah gerhana : ${toDegreeFullRound2(b.tengahGerhanaWD)}")
+        println("akhir total    : ${toDegreeFullRound2(b.akhirTotalWD)}")
+        println("akhir umbra    : ${toDegreeFullRound2(b.akhirUmbraWD)}")
+        println("akhir penumbra : ${toDegreeFullRound2(b.akhirPenumbraWD)}")
+        println("")
+        println("magnitude penumbra : ${b.magnitudePenumbra}")
+        println("magnitude usbu' : ${toDegreeFullRound2(b.magnitudeUsbu)}")
+        println("lama penumbra : ${toDegreeFullRound2(b.lamaPenumbra)}")
+        println("lama umbra : ${toDegreeFullRound2(b.lamaUmbra)}")
+        println("lama total : ${toDegreeFullRound2(b.lamaTotal)}")
+        println("")
     }
 }
