@@ -10,8 +10,6 @@ import com.andihasan7.lib.irsyadulmurid.AwalBulan.TanggalHarpas
 
 class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
 
-
-
 	val vrHY = year + (month * 29.53) / 354.3671
     val vrK = ((vrHY - 1410) * 12).round(1) - 0.5
     val vrT = vrK / 1200
@@ -55,10 +53,9 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     val vrT16 = -0.0002 * sin(Math.toRadians(_E))
     val vrMT = vrT1 + vrT2 + vrT3 + vrT4 + vrT5 + vrT6 + vrT7 + vrT8 + vrT9 + vrT10 + vrT11 + vrT12 + vrT13 + vrT14 + vrT15 + vrT16
     val vrJDIstiqbal = vrJD + 0.5 + vrMT
-    val vrT0 = (vrJDIstiqbal).mod(1.0) * 24 // jam UT
+    val vrT0 = (vrJDIstiqbal - (vrJDIstiqbal).toInt()).round(3) * 24 // jam UT
     val vrT0bef = vrT0 + (timeZone).toDouble() // jam WD sebelum - 24
     val vrT0wd = (vrT0bef).mod(24.0)
-    
     
     val c = TanggalHarpas(vrJDIstiqbal, vrT0bef)
     // Hari Int
@@ -77,41 +74,6 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     val bulanString = c.fnBLNString() // Bulan String
     // Tahun Int
     val tahunInt = c.fnTHN()
-    
-    /*
-    val vrZ = if (vrT0 >= 17) {
-    	vrJDIstiqbal.toInt() + 1
-    } else {
-    	vrJDIstiqbal.toInt()
-    }
-    val vrAA = ((vrZ - 1867216.25) / 36524.25).toInt()
-    val vrA = vrZ + 1 + vrAA - ((vrAA).toDouble() / 4)
-    val vrB = vrA + 1524
-    val vrC = ((vrB - 122.1) / 365.25).toInt()
-    val vrD = (365.25 * vrC).toInt()
-    val vrEtgl = ((vrB - vrD) / 30.6001).toInt()
-    // Tanggal Int
-    val tanggalInt = (vrB - vrD - (30.6001 * vrEtgl).toInt()).toInt()
-    // Bulan Int
-    val bulanInt = if (vrEtgl < 13.5) {
-    	vrEtgl - 1
-    } else {
-    	vrEtgl - 13
-    }
-    // Tahun Int
-    val tahunInt = if (vrEtgl < 13.2) {
-    	vrC - 4716
-    } else {
-    	vrC - 4715
-    }
-    val vrPa = vrZ + 2
-    // Hari Int, dihitung dari Ahad/Minggu
-    val hariInt = vrPa - ((vrPa).toDouble() / 7).toInt() * 7
-    // Pasaran Int, dihitung dari Kliwon
-    val pasaranInt = vrPa - ((vrPa).toDouble() / 5).toInt() * 5
-    */
-    
-    
     
     // Lintang Bulan
     val vrS1 = -0.0048 * vrE * cos(Math.toRadians(vrM))
@@ -226,8 +188,6 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     } else {
     	00.0
     }
-    
-    
     
     // Jam WD/Waktu Daerah sesuai Zona Waktu
     val awalPenumbraWD = if (vrStatus == true) {
