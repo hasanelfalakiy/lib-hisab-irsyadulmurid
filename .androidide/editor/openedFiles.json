@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 86,
-          "index": 9930,
-          "line": 258
+          "column": 36,
+          "index": 9595,
+          "line": 250
         },
         "start": {
-          "column": 86,
-          "index": 9930,
-          "line": 258
+          "column": 36,
+          "index": 9595,
+          "line": 250
         }
       }
     },
@@ -19,29 +19,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/GerhanaBulan/IrsyadGerhanaBulan.kt",
       "selection": {
         "end": {
-          "column": 35,
-          "index": 2865,
-          "line": 57
+          "column": 63,
+          "index": 2891,
+          "line": 55
         },
         "start": {
-          "column": 35,
-          "index": 2865,
-          "line": 57
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/AwalBulan/IrsyadBulan.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 63,
+          "index": 2891,
+          "line": 55
         }
       }
     }
