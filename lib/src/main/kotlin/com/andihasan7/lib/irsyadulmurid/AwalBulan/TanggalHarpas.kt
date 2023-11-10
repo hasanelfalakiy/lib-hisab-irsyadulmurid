@@ -4,7 +4,7 @@ import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.NumberToString
 
 class TanggalHarpas(val vrJDIjtima: Double, val vrWIwd: Double) {
 	// Z
-    val vrZ = if (vrWIwd > 24) {
+    val vrZ = if (vrWIwd >= 24) {
     		vrJDIjtima.toInt() + 1
     	} else {
         	vrJDIjtima.toInt()
