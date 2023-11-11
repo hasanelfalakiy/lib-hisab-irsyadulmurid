@@ -248,7 +248,7 @@ class LibraryTest {
     
     @Test
     fun testIrsyadGerhanaBulan() {
-        val b = IrsyadGerhanaBulan(4, 1445, 7)
+        val b = IrsyadGerhanaBulan(3, 1447, 7)
     
         val h = 0.0
         println(b.jenisGerhana)
