@@ -467,7 +467,7 @@ b.tahunInt
 Status ada kemungkinan gerhana atau tidaknya,
 jika true maka kemungkinan gerhana, jika false maka tidak ada gerhana
 */
-b.vrStatus // true/false
+b.statusGB // true/false
 // Jenis gerhana (Total, Sebagian/Partial, Penumbra, & Tidak ada Gerhana Bulan)
 b.jenisGerhana
 
@@ -478,7 +478,7 @@ b.awalPenumbraUT
 b.awalUmbraUT
 // awal total
 b.awalTotalUT
-// tengah gerhana UT vrT0
+// tengah gerhana
 b.tengahGerhanaUT
 // akhir total
 b.akhirTotalUT
