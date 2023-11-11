@@ -20,7 +20,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     	jika vrFInt diantara 0 ~ 12 atau 168 ~ 192 atau 348 ~ 360, maka mungkin terjadi gerhana bulan
     */
     
-    val vrStatus =
+    val statusGB =
     	when (vrFInt) {
         	in 0..14 -> true // true = mungkin terjadi gerhana bulan
             in 168..193 -> true
@@ -127,7 +127,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
         else -> "Tidak ada Gerhana Bulan"
     }
     // vrt1 untuk jam masuk penumbra
-    val vrt1 = if (vrStatus == true) {
+    val vrt1 = if (statusGB == true) {
     	60.0 / vrN * sqrt((vrH).pow(2) - (vry).pow(2)) / 60
     } else {
     	00.0
@@ -147,7 +147,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     
     // Jam UT
     // awal penumbra
-    val awalPenumbraUT = if (vrStatus == true) {
+    val awalPenumbraUT = if (statusGB == true) {
     	(vrT0 - vrt1).mod(24.0)
     } else {
     	00.0
@@ -165,7 +165,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     	(vrT0 - vrt3).mod(24.0)
     }
     // tengah gerhana UT vrT0
-    val tengahGerhanaUT = if (vrStatus == true) {
+    val tengahGerhanaUT = if (statusGB == true) {
     	vrT0
     } else {
     	00.0
@@ -183,14 +183,14 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     	(vrT0 + vrt2).mod(24.0)
     }
     // akhir penumbra
-    val akhirPenumbraUT = if (vrStatus == true) {
+    val akhirPenumbraUT = if (statusGB == true) {
     	(vrT0 + vrt1).mod(24.0)
     } else {
     	00.0
     }
     
     // Jam WD/Waktu Daerah sesuai Zona Waktu
-    val awalPenumbraWD = if (vrStatus == true) {
+    val awalPenumbraWD = if (statusGB == true) {
     	(vrT0wd - vrt1).mod(24.0)
     } else {
     	00.0
@@ -206,7 +206,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     	(vrT0wd - vrt3).mod(24.0)
     }    
     // tengah gerhana vrT0wd
-    val tengahGerhanaWD = if (vrStatus == true) {
+    val tengahGerhanaWD = if (statusGB == true) {
     	vrT0wd
     } else {
     	00.0
@@ -221,7 +221,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     } else {
     	(vrT0wd + vrt2).mod(24.0)
     }
-    val akhirPenumbraWD = if (vrStatus == true) {
+    val akhirPenumbraWD = if (statusGB == true) {
     	(vrT0wd + vrt1).mod(24.0)
     } else {
     	00.0
