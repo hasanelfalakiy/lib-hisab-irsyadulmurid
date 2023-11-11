@@ -31,7 +31,6 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur
 
 - [x] Fase-fase Bulan
-- [x] Gerhana Bulan
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
@@ -40,6 +39,7 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur yang akan datang
 
 - [ ] Gerhana Matahari
+- [ ] Gerhana Bulan
 
 ## Konfigurasi pertama
 
@@ -78,7 +78,10 @@ Sebagian besar nilai kembalian nya berupa Double, untuk merubah ke format deraja
 
 1. Hisab Waktu Sholat
 ```kotlin.kt
-// input nilai dimasukkan ke constructor class
+/* input nilai dimasukkan ke constructor class,
+tanggal bulan tahun masehi,
+zona waktu & tinggi tempat bisa integer/double
+*/
 class IrsyadSholat(
     val date: Int,
     val month: Int,
@@ -339,6 +342,7 @@ val pendhakSewu = jdMng[6] // 1000 hari
 
 /*
     New Moon/Ijtima'
+    semua fase input bulan & tahun hijriyah, zona waktu bisa integer/double
 */
 val bulan = 9
 val tahun = 1445
@@ -439,6 +443,7 @@ n.stringBulanLast
 6. Gerhana Bulan
 ```kotlin.kt
 
+// Input bulan & tahun hijriyah, zona waktu bisa integer/double
 val b = IrsyadGerhanaBulan(bulan: Int, tahun: Int, timeZone: Number)
 
 // Hari Int
@@ -462,7 +467,7 @@ b.tahunInt
 Status ada kemungkinan gerhana atau tidaknya,
 jika true maka kemungkinan gerhana, jika false maka tidak ada gerhana
 */
-b.statusGB // true/false
+b.vrStatus // true/false
 // Jenis gerhana (Total, Sebagian/Partial, Penumbra, & Tidak ada Gerhana Bulan)
 b.jenisGerhana
 
@@ -473,7 +478,7 @@ b.awalPenumbraUT
 b.awalUmbraUT
 // awal total
 b.awalTotalUT
-// tengah gerhana
+// tengah gerhana UT vrT0
 b.tengahGerhanaUT
 // akhir total
 b.akhirTotalUT
