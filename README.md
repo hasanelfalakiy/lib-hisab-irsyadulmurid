@@ -31,6 +31,7 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur
 
 - [x] Fase-fase Bulan
+- [x] Gerhana Bulan
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
@@ -39,7 +40,6 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur yang akan datang
 
 - [ ] Gerhana Matahari
-- [ ] Gerhana Bulan
 
 ## Konfigurasi pertama
 
@@ -434,6 +434,80 @@ n.stringHariLast
 n.stringPasaranLast
 // bulan string
 n.stringBulanLast
+
+```
+6. Gerhana Bulan
+```kotlin.kt
+
+val b = IrsyadGerhanaBulan(bulan: Int, tahun: Int, timeZone: Number)
+
+// Hari Int
+b.hariInt
+// Pasaran Int
+b.pasaranInt
+// Hari String
+b.hariString
+// Pasaran String
+b.pasaranString
+// Tanggal Int
+b.tanggalInt
+// Bulan Int
+b.bulanInt
+// Bulan String
+b.bulanString
+// Tahun Int
+b.tahunInt
+
+/*
+Status ada kemungkinan gerhana atau tidaknya,
+jika true maka kemungkinan gerhana, jika false maka tidak ada gerhana
+*/
+b.statusGB // true/false
+// Jenis gerhana (Total, Sebagian/Partial, Penumbra, & Tidak ada Gerhana Bulan)
+b.jenisGerhana
+
+// Jam UT, semua bertipe Double
+// awal penumbra
+b.awalPenumbraUT
+// awal umbra
+b.awalUmbraUT
+// awal total
+b.awalTotalUT
+// tengah gerhana
+b.tengahGerhanaUT
+// akhir total
+b.akhirTotalUT
+// akhir umbra
+b.akhirUmbraUT
+// akhir penumbra
+b.akhirPenumbraUT
+
+
+// Jam WD/Waktu Daerah sesuai Zona Waktu
+b.awalPenumbraWD
+// awal umbra
+b.awalUmbraWD
+// awal total
+b.awalTotalWD
+// tengah gerhana
+b.tengahGerhanaWD
+// akhir total
+b.akhirTotalWD
+// akhir umbra
+b.akhirUmbraWD
+// akhir penumbra
+b.akhirPenumbraWD
+
+// magnitudo penumbra
+b.magnitudePenumbra
+// magnitude usbu', sebaiknya ubah ke DMS
+b.magnitudeUsbu
+// durasi penumbra
+b.lamaPenumbra
+// durasi hakiki/umbra
+b.lamaUmbra
+// durasi total
+b.lamaTotal
 
 ```
 
