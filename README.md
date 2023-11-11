@@ -31,6 +31,7 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur
 
 - [x] Fase-fase Bulan
+- [x] Gerhana Bulan
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
@@ -39,7 +40,6 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 ## Fitur yang akan datang
 
 - [ ] Gerhana Matahari
-- [ ] Gerhana Bulan
 
 ## Konfigurasi pertama
 
