@@ -32,14 +32,11 @@ Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para
 
 - [x] Fase-fase Bulan
 - [x] Gerhana Bulan
+- [x] Gerhana Matahari
 - [x] Hisab Awal Waktu Sholat
 - [x] Hisab Awal Bulan Hijriyah
 - [x] Tahwil Tarikh
 - [x] Umum
-
-## Fitur yang akan datang
-
-- [ ] Gerhana Matahari
 
 ## Konfigurasi pertama
 
@@ -166,7 +163,9 @@ fun selisihLintangT(): Double
 2. Hisab Awal Bulan Hijriyah
 
 ```kotlin.kt
-// input nilai dimasukkan ke constructor class
+
+// input nilai (bulan, tahun hijriyah dll) dimasukkan ke constructor class
+
 class IrsyadBulan(
     val month: Number,
     val year: Number,
@@ -326,6 +325,7 @@ harpas[1] // String Pasaran
 
 val jdMng = Umum.selamatan(jd: Double) DoubleArray // menggunakan julian day masehi ke hijriyah
 
+// output dalam bentuk julianday, lalu ubah ke tarikh/hari pasaran, tanggal bulan tahun
 val hariMeninggal = jdMng[0] // sama nilai input
 val pendhak7 = jdMng[1] // 7 hari setelah meninggal 
 val pendhak40 = jdMng[2] // 40 hari
@@ -513,6 +513,70 @@ b.lamaPenumbra
 b.lamaUmbra
 // durasi total
 b.lamaTotal
+
+```
+7. Gerhana Matahari
+```kotlin.kt
+
+// Input bulan & tahun hijriyah, zona waktu bisa integer/double
+val s = IrsyadGerhanaMatahari(bulan: Int, tahun: Int, timeZone: Number)
+
+// Status gerhana
+s.statusGM // true/false, true = terjadi gerhana & false = tidak terjadi gerhana
+// Jenis gerhana
+s.jenisGM // Total, Sebagian/Partial, Cincin/Annular, Hybrid, dan Tidak ada Gerhana Matahari
+
+// Hari Int
+s.hariIntGM
+// Pasaran Int
+s.pasaranIntGM
+// Hari String
+s.hariStringGM
+// Pasaran String
+s.pasaranStringGM
+// Tanggal Int
+s.tanggalIntGM
+// Bulan Int
+s.bulanIntGM
+// Bulan String
+s.bulanStringGM
+// Tahun Int
+s.tahunIntGM
+
+// Awal gerhana jam UT
+s.awalGMUT
+// Awal total
+s.awalTotalGMUT
+// Tengah gerhana
+s.tengahGMUT
+// Akhir total
+s.akhirTotalGMUT
+// Akhir gerhana
+s.akhirGMUT
+
+
+// Awal gerhana jam WD (sesuai zona waktu)
+s.awalGMWD
+// Awal total
+s.awalTotalGMWD
+// Tengah gerhana
+s.tengahGMWD
+// Akhir total
+s.akhirTotalGMWD
+// Akhir gerhana
+s.akhirGMWD
+
+// Magnitude gerhana
+s.magnitudeGM
+// gamma
+s.gammaGM
+// Arah gerhana
+s.arahGerhanaGM
+// Lama gerhana
+s.lamaGerhanaGM
+// Lama gerhana total
+s.lamaTotalGM
+
 
 ```
 
