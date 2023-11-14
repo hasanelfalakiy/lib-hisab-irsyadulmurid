@@ -13,6 +13,7 @@ import com.andihasan7.lib.irsyadulmurid.TahwilTarikh.TahwilTarikh
 import com.andihasan7.lib.irsyadulmurid.Umum.Umum
 import com.andihasan7.lib.irsyadulmurid.MoonPhases.MoonPhases
 import com.andihasan7.lib.irsyadulmurid.GerhanaBulan.IrsyadGerhanaBulan
+import com.andihasan7.lib.irsyadulmurid.GerhanaMatahari.IrsyadGerhanaMatahari
 
 class LibraryTest {
 
@@ -279,5 +280,35 @@ class LibraryTest {
         println("lama umbra : ${toDegreeFullRound2(b.lamaUmbra)}")
         println("lama total : ${toDegreeFullRound2(b.lamaTotal)}")
         println("")
+    }
+    
+    @Test
+    fun testGerhanaMatahari() {
+        val s = IrsyadGerhanaMatahari(12, 1434, 7)
+    
+        val hs = s.vrt2
+        //println(hs)
+        //println(toDegreeFullRound2(hs))
+        println("status gerhana : ${s.statusGM}")
+        println("jenis gerhana  : ${s.jenisGM}")
+        println("tgl/bln/thn  : ${s.tanggalIntGM} ${s.bulanIntGM} ${s.tahunIntGM}")
+        println("hari pasaran : ${s.hariIntGM} ${s.pasaranIntGM}")
+        println("")
+        println("awal gerhana   : ${toDegreeFullRound2(s.awalGMUT)}")
+        println("awal total     : ${toDegreeFullRound2(s.awalTotalGMUT)}")
+        println("tengah gerhana : ${toDegreeFullRound2(s.tengahGMUT)}")
+        println("akhir total    : ${toDegreeFullRound2(s.akhirTotalGMUT)}")
+        println("akhir gerhana  : ${toDegreeFullRound2(s.akhirGMUT)}")
+        println("")
+        println("awal gerhana   : ${toDegreeFullRound2(s.awalGMWD)}")
+        println("awal total     : ${toDegreeFullRound2(s.awalTotalGMWD)}")
+        println("tengah gerhana : ${toDegreeFullRound2(s.tengahGMWD)}")
+        println("akhir total    : ${toDegreeFullRound2(s.akhirTotalGMWD)}")
+        println("akhir gerhana  : ${toDegreeFullRound2(s.akhirGMWD)}")
+        println("")
+        println("magnitude gerhana  : ${s.magnitudeGM}")
+        println("arah gerhana/gamma  : ${s.gammaGM} ${toDegreeFullRound2(s.gammaGM)} ${s.arahGerhanaGM}")
+        println("lama gerhana  : ${toDegreeFullRound2(s.lamaGerhanaGM)}")
+        println("lama gerhana total  : ${toDegreeFullRound2(s.lamaTotalGM)}")
     }
 }
