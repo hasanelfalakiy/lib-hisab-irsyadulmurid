@@ -17,7 +17,7 @@ plugins {
 }
 
 group = "com.github.andihasan97"
-version = "4.0.0"
+version = "5.0.0"
 
 repositories {
     // Use Maven Central for resolving dependencies.
