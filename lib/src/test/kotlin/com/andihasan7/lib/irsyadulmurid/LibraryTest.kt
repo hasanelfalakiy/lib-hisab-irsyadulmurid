@@ -75,38 +75,47 @@ class LibraryTest {
             println("Umur Hilal= ${toDegreeFullRound2(b.umurHilal())}")
             println(" ")
             
-            /*
-            val tgl = 30
-            val m = 7
-            val th = 2023
-            val ith = 2
-            
-            val s = IrsyadSholat(tgl, m, th, lat, long, tZ, tt, ith)
-            
-            println("Imsak = ${toDegreeFullRound2(s.imsak())}")
-            println("Shubuh = ${toDegreeFullRound2(s.shubuh())}")
-            println("Terbit = ${toDegreeFullRound2(s.thulu())}")
-            println("Dluha = ${toDegreeFullRound2(s.dluha())}")
-            println("Dzuhur = ${toDegreeFullRound2(s.dzuhur())}")
-            println("Ashar = ${toDegreeFullRound2(s.ashar())}")
-            println("Maghrib = ${toDegreeFullRound2(s.maghrib())}")
-            println("Isya = ${toDegreeFullRound2(s.isya())}")
-            println("T Malam = ${toDegreeFullRound2(s.tengahMalam())}")
-            
-            println("Deklinasi = ${toDegreeFullRound2(s.deklinasi())}")
-            println("EoT = ${toDegreeFullRound2(s.equationOfTime())}")
-            println("Semi Diameter = ${toDegreeFullRound2(s.semiDiameter())}")
-            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblat())}")
-            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblatUTSB())}")
-            println("Arah Qiblat = ${toDegreeFullRound2(s.qiblat())}")
-            println("Rashdul Qiblat 1 = ${toDegreeFullRound2(s.rashdul1())}")
-            println("Rashdul Qiblat 2 = ${toDegreeFullRound2(s.rashdul2())}")
-            println("Selisih Jam Markaz ~ Makkah = ${toDegreeFullRound2(s.selisihJam())}")
-            println("Jarak Markaz ~ Makkah = ${s.jarakKeduanya()} Km")
-            println("S Deklinasi ~ L Ka'bah = ${toDegreeFullRound2(s.selisihLintangK())}")
-            println("S Deklinasi ~ L Tempat = ${toDegreeFullRound2(s.selisihLintangT())}")
-            */
     }
+    
+    @Test
+    fun testWaktuSholat() {
+    
+        val tgl = 30
+        val m = 7
+        val th = 2023
+        val lt = -7.4333333334
+        val bj = 111.43333333334
+        val timez = 7
+        val tinggi = 150
+        val ith = 2
+            
+        val s = IrsyadSholat(tgl, m, th, lt, bj, timez, tinggi, ith)
+            
+        println("Imsak = ${toDegreeFullRound2(s.imsak())}")
+        println("Shubuh = ${toDegreeFullRound2(s.shubuh())}")
+        println("Terbit = ${toDegreeFullRound2(s.thulu())}")
+        println("Dluha = ${toDegreeFullRound2(s.dluha())}")
+        println("Dzuhur = ${toDegreeFullRound2(s.dzuhur())}")
+        println("Ashar = ${toDegreeFullRound2(s.ashar())}")
+        println("Maghrib = ${toDegreeFullRound2(s.maghrib())}")
+        println("Isya = ${toDegreeFullRound2(s.isya())}")
+        println("T Malam = ${toDegreeFullRound2(s.tengahMalam())}")
+            
+        println("Deklinasi = ${toDegreeFullRound2(s.deklinasi())}")
+        println("EoT = ${toDegreeFullRound2(s.equationOfTime())}")
+        println("Semi Diameter = ${toDegreeFullRound2(s.semiDiameter())}")
+        println("Arah Qiblat = ${toDegreeFullRound2(s.qiblat())}")
+        println("Arah Qiblat = ${toDegreeFullRound2(s.qiblatUTSB())}")
+        println("Rashdul Qiblat 1 = ${toDegreeFullRound2(s.rashdu1())}")
+        println("Rashdul Qiblat 2 = ${toDegreeFullRound2(s.rashdu2())}")
+        println("Selisih Jam Markaz ~ Makkah = ${toDegreeFullRound2(s.selisihJam())}")
+        println("Jarak Markaz ~ Makkah = ${s.jarakKeduanya()} Km")
+        println("S Deklinasi ~ L Ka'bah = ${toDegreeFullRound2(s.selisihLintangK())}")
+        println("S Deklinasi ~ L Tempat = ${toDegreeFullRound2(s.selisihLintangT())}")
+        println("")
+            
+    }
+    
     @Test
     fun testTahwil() {
         
@@ -248,10 +257,10 @@ class LibraryTest {
     }
     
     @Test
-    fun testIrsyadGerhanaBulan() {
+    fun testGerhanaBulan() {
         val b = IrsyadGerhanaBulan(3, 1447, 7)
     
-        val h = 0.0
+        //val h = 0.0
         println(b.jenisGerhana)
         //println(h)
         //println(toDegreeFullRound2(h))
@@ -286,7 +295,7 @@ class LibraryTest {
     fun testGerhanaMatahari() {
         val s = IrsyadGerhanaMatahari(12, 1434, 7)
     
-        val hs = s.vrt2
+        //val hs = s.vrt2
         //println(hs)
         //println(toDegreeFullRound2(hs))
         println("status gerhana : ${s.statusGM}")
