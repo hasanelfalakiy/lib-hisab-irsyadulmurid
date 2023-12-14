@@ -62,11 +62,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-hisab-irsyadulmurid:$version_release")
+implementation("com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.1")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:$version_release'
+implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.1'
 ```
 
 ## Cara menggunakan
