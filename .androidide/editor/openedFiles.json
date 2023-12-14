@@ -16,20 +16,35 @@
       }
     },
     {
-      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md",
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 26,
-          "index": 4049,
-          "line": 145
+          "column": 17,
+          "index": 645,
+          "line": 19
         },
         "start": {
-          "column": 26,
-          "index": 4049,
-          "line": 145
+          "column": 17,
+          "index": 645,
+          "line": 19
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 70,
+          "index": 4814,
+          "line": 107
+        },
+        "start": {
+          "column": 70,
+          "index": 4814,
+          "line": 107
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/README.md"
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/WaktuSholat/IrsyadSholat.kt"
 }
