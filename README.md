@@ -141,10 +141,10 @@ fun qiblat(): Double
 fun qiblatUTSB(): Double
 	
 // fungsi Rashdul Qiblat 1
-fun rashdul1(): Double
+fun rashdu1(): Double
 	
 // fungsi Rashdul Qiblat 2
-fun rashdul2(): Double
+fun rashdu2(): Double
     
 // Selisih Jam antara Markaz ~ Makkah
 fun selisihJam(): Double
