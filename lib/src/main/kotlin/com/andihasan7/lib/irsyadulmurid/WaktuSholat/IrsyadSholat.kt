@@ -188,14 +188,14 @@ class IrsyadSholat(
 	val rq2 = rq1.mod(24.0)
 	
     // Roshdul Qiblat 1 TimeZone
-    val rashdul1 = rq2 - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
+    val rashdu1 = rq2 - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
     // Roshdul Qiblat 2
 	
     val rQ = -(pR -cA) / 15 + 12
 	
     // Roshdul Qiblat 2 TimeZone
-    val rashdul2 = rQ - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
+    val rashdu2 = rQ - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
     
     // Selisih Jam antara Markaz ~ Makkah
     val selisih = (longitude - bK)
@@ -263,10 +263,10 @@ class IrsyadSholat(
 	fun qiblatUTSB(): Double = p
 	
 	// fungsi Rashdul Qiblat 1
-	fun rashdul1(): Double = rashdul1
+	fun rashdu1(): Double = rashdu1
 	
 	// fungsi Rashdul Qiblat 2
-	fun rashdul2(): Double = rashdul2
+	fun rashdu2(): Double = rashdu2
     
     // Selisih Jam antara Markaz ~ Makkah
     fun selisihJam(): Double = selisihJam
