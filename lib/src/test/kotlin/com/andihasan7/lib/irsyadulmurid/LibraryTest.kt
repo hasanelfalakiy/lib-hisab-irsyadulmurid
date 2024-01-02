@@ -39,12 +39,12 @@ class LibraryTest {
         /* val classUnderTest = Library()
         assertTrue(classUnderTest, "someLibraryMethod should return 'true'")
         */
-	        val bln = 9
+	        val bln = 5
             val thn = 1445
-            val lat = -7.464141667 //-7.43333333334 //-7.476111111 // -7.183333333
-            val long = 111.145825 //111.43333333334 //111.313055556 // 113.25
-            val tZ = 7
-            val tt = 202
+            val lat = 5.576961111 //-7.43333333334 //-7.476111111 // -7.183333333
+            val long = 100.4880194 //111.43333333334 //111.313055556 // 113.25
+            val tZ = 8
+            val tt = 20
             val check = true
     
             val b = IrsyadBulan(bln, thn, lat, long, tZ, tt, check)
