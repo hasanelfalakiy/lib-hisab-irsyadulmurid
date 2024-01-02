@@ -27,7 +27,12 @@ Kitab Irsyadul Murid merupakan kitab karya KH. Ahmad Ghozali Muhammad Fatchulloh
 ## Perhatian!
 
 Saya menyadari program yang saya tulis ini masih banyak kekurangan, kiranya para ahli mau mengoreksi dan para pelajar yang ingin mempelajari dipersilakan.
-  
+
+## Note
+
+- Tinggi tempat diatur ke 0 m (bagian dip), jika terdeteksi dibawah 0 (minus).
+- Dalam kondisi tertentu khusus Rashdul qiblat tidak bisa menghitung alias bernilai NaN.
+
 ## Fitur
 
 - [x] Fase-fase Bulan
@@ -62,12 +67,17 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.1")
+implementation("com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.2")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.1'
+implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.2'
 ```
+## Tutorial Youtube
+Praktik implementasi library hisab irsyadul murid
+Part 1 [Membuat layout](https://youtu.be/UXJz_lqkXwk)
+Part 2 [Implementasi library](https://youtu.be/LefWCSdcV8s)
+Part 3 [Implementasi library](https://youtu.be/AxQ_ATx0imk)
 
 ## Cara menggunakan
 
