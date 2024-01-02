@@ -162,7 +162,12 @@ class IrsyadBulan(
     // sd Semidiameter Matahari
     val vrsdM = 0.267 / (1 - 0.017 * cos(Math.toRadians(vrmM)))
     // dip, Kerendahan ufuk
-    val vrdip = (1.76/60) * sqrt((elevation).toDouble())
+    val vrdip =
+        if ((elevation).toDouble() >= 0.0) {
+        	(1.76/60) * sqrt((elevation).toDouble())
+        } else {
+        	(1.76/60) * sqrt(0.0)
+        }
     // h Maghrib
     val vrh = -(vrsdM + 0.575 + vrdip)
     // t

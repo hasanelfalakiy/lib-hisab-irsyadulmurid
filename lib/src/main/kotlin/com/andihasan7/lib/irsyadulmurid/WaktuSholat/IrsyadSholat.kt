@@ -27,6 +27,7 @@ import kotlin.math.asin
 import kotlin.math.acos
 import kotlin.math.atan
 import kotlin.math.sin
+import kotlin.math.sqrt
 import kotlin.math.cos
 import kotlin.math.tan
 import com.andihasan7.lib.irsyadulmurid.round
@@ -134,12 +135,12 @@ class IrsyadSholat(
     val dip =
         if ((elevation).toDouble() >= 0.0) {
         	(1.76 / 60) *
-            Math.sqrt(
+            sqrt(
                 (elevation).toDouble()
             ) // konversi ke Double disini untuk memudahkan suatu saat custom tinggi tempat
         } else { // tinggitempat diset ke 0 ketika tinggitempat terdeteksi di bawah 0/minus
         	(1.76 / 60) *
-            Math.sqrt(
+            sqrt(
                 (0.0)
             )
         }
