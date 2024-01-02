@@ -219,14 +219,14 @@ class IrsyadSholat(
 	val rq2 = rq1.mod(24.0)
 	
     // Roshdul Qiblat 1 TimeZone
-    val rashdu1 = rq2 - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
+    val rashdu1 = (rq2 - eq - (longitude - ((timeZone).toDouble() * 15)) / 15).mod(24.0)
 	
     // Roshdul Qiblat 2
 	
     val rQ = -(pR -cA) / 15 + 12
 	
     // Roshdul Qiblat 2 TimeZone
-    val rashdu2 = rQ - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
+    val rashdu2 = (rQ - eq - (longitude - ((timeZone).toDouble() * 15)) / 15).mod(24.0)
     
     // Selisih Jam antara Markaz ~ Makkah
     val selisih = (longitude - bK)
