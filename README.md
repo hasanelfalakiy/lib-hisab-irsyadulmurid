@@ -598,6 +598,7 @@ s.lamaTotalGM
 ## Kontak Kami
 
 - [Telegram](https://t.me/moonelfalakiy)
+- [Grup diskusi Telegram](https://t.me/moonlight_studio01/9)
 
 ## License
 
