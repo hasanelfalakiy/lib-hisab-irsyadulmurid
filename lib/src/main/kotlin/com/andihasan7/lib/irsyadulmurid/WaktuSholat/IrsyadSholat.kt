@@ -152,7 +152,7 @@ class IrsyadSholat(
     val dluhaWD = dL - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
 	// Nishful Lail
-    val tengahMalamWD = maghribWD + ((shubuhWD + 24 - maghribWD) / 2) - ihthiyat // dikurangi ihthiyat karena sudah mengambil data maghrib dan shubuh yang sudah ditambah ihthiyat
+    val tengahMalamWD = (maghribWD + ((shubuhWD + 24 - maghribWD) / 2) - ihthiyat).mod(24.0) // dikurangi ihthiyat karena sudah mengambil data maghrib dan shubuh yang sudah ditambah ihthiyat
 	
 	// Arah Qiblat
     // lintang dan bujur Ka'bah'

@@ -80,14 +80,14 @@ class LibraryTest {
     @Test
     fun testWaktuSholat() {
     
-        val tgl = 30
-        val m = 7
-        val th = 2023
-        val lt = -7.4333333334
-        val bj = 111.43333333334
-        val timez = 7
-        val tinggi = 150
-        val ith = 2
+        val tgl = 1
+        val m = 1
+        val th = 2024
+        val lt = 5.576961111
+        val bj = 100.4880194
+        val timez = 8
+        val tinggi = 20
+        val ith = 0
             
         val s = IrsyadSholat(tgl, m, th, lt, bj, timez, tinggi, ith)
             
