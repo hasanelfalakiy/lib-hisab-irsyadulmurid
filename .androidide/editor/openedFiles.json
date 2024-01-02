@@ -5,13 +5,13 @@
       "selection": {
         "end": {
           "column": 91,
-          "index": 4811,
-          "line": 154
+          "index": 3572,
+          "line": 120
         },
         "start": {
           "column": 91,
-          "index": 4811,
-          "line": 154
+          "index": 3572,
+          "line": 120
         }
       }
     },
@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 19,
-          "index": 3795,
-          "line": 89
+          "column": 23,
+          "index": 3775,
+          "line": 88
         },
         "start": {
-          "column": 19,
-          "index": 3795,
-          "line": 89
+          "column": 23,
+          "index": 3775,
+          "line": 88
         }
       }
     }

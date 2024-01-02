@@ -112,7 +112,18 @@ class IrsyadSholat(
 	val asharWD = aS - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
 	// Maghrib
-    val dip = (1.76 / 60) * Math.sqrt((elevation).toDouble()) // konversi ke Double disini untuk memudahkan suatu saat custom tinggi tempat
+    val dip =
+        if ((elevation).toDouble() >= 0.0) {
+        	(1.76 / 60) *
+            Math.sqrt(
+                (elevation).toDouble()
+            ) // konversi ke Double disini untuk memudahkan suatu saat custom tinggi tempat
+        } else { // tinggitempat diset ke 0 ketika tinggitempat terdeteksi di bawah 0/minus
+        	(1.76 / 60) *
+            Math.sqrt(
+                (0.0)
+            )
+        }
     // ho Maghrib
     val hM = -(sd + (34.5 / 60) + dip) - 0.0024
     // Maghrib WD
