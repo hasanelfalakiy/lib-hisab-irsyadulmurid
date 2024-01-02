@@ -604,7 +604,7 @@ s.lamaTotalGM
 
 ```
 Library Irsyadul Murid
-Copyright (C) 2023  Andi Hasan Ashari
+Copyright (C) 2023-2024  Andi Hasan Ashari
 
 Library Irsyadul Murid is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
