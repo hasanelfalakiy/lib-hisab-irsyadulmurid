@@ -250,10 +250,10 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     // magnitude usbu'
     val magnitudeUsbu = vrMGUsbu
     // durasi penumbra
-    val lamaPenumbra = akhirPenumbraUT - awalPenumbraUT
+    val lamaPenumbra = (vrT0 + vrt1) - (vrT0 - vrt1)
     // durasi hakiki/umbra
-    val lamaUmbra = akhirUmbraUT - awalUmbraUT
+    val lamaUmbra = (vrT0 + vrt2) - (vrT0 - vrt2)
     // durasi total
-    val lamaTotal = akhirTotalUT - awalTotalUT
+    val lamaTotal = (vrT0 + vrt3) - (vrT0 - vrt3)
     
 }
