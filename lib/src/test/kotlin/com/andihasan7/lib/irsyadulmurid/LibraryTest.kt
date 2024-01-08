@@ -258,10 +258,11 @@ class LibraryTest {
     
     @Test
     fun testGerhanaBulan() {
-        val b = IrsyadGerhanaBulan(3, 1447, 7)
+        val b = IrsyadGerhanaBulan(2, 1450, 7)
     
         //val h = 0.0
         println(b.jenisGerhana)
+        println(b.vrMG)
         //println(h)
         //println(toDegreeFullRound2(h))
         println("")
@@ -293,7 +294,7 @@ class LibraryTest {
     
     @Test
     fun testGerhanaMatahari() {
-        val s = IrsyadGerhanaMatahari(12, 1434, 7)
+        val s = IrsyadGerhanaMatahari(7, 1431, 7)
     
         //val hs = s.vrt2
         //println(hs)

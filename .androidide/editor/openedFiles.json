@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/GerhanaBulan/IrsyadGerhanaBulan.kt",
+      "selection": {
+        "end": {
+          "column": 49,
+          "index": 8875,
+          "line": 256
+        },
+        "start": {
+          "column": 49,
+          "index": 8875,
+          "line": 256
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 42,
+          "index": 9668,
+          "line": 260
+        },
+        "start": {
+          "column": 42,
+          "index": 9668,
+          "line": 260
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/GerhanaBulan/IrsyadGerhanaBulan.kt"
+}
