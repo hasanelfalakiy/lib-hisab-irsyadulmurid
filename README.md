@@ -9,15 +9,15 @@
 
 <p align="center">
 <!-- Latest release -->
-<img src="https://img.shields.io/github/v/release/andihasan97/lib-hisab-irsyadulmurid?include_releases&label=latest%20release&style=for-the-badge&color=brightgreen" alt="latest_release"/>
+<img src="https://img.shields.io/github/v/release/hasanelfalakiy/lib-hisab-irsyadulmurid?include_releases&label=latest%20release&style=for-the-badge&color=brightgreen" alt="latest_release"/>
 <!-- Jitpack release -->
-<img src="https://img.shields.io/jitpack/v/andihasan97/lib-hisab-irsyadulmurid.svg?style=for-the-badge&color=brightgreen" alt="jitpack_release">
+<img src="https://img.shields.io/jitpack/v/hasanelfalakiy/lib-hisab-irsyadulmurid.svg?style=for-the-badge&color=brightgreen" alt="jitpack_release">
 <!-- Github Repo size -->
-<img src="https://img.shields.io/github/repo-size/andihasan97/lib-hisab-irsyadulmurid?style=for-the-badge">
+<img src="https://img.shields.io/github/repo-size/hasanelfalakiy/lib-hisab-irsyadulmurid?style=for-the-badge">
 <!-- Build with Kotlin -->
 <img src="https://img.shields.io/badge/Kotlin-C116E3?&style=for-the-badge&logo=kotlin&logoColor=white" alt="build_with_kotlin">
 <!-- License -->
-<img src="https://img.shields.io/github/license/andihasan97/lib-hisab-irsyadulmurid?color=blue&style=for-the-badge&color=brightgreen" alt="License">
+<img src="https://img.shields.io/github/license/hasanelfalakiy/lib-hisab-irsyadulmurid?color=blue&style=for-the-badge&color=brightgreen" alt="License">
 </p>
 
 ## Tentang Kitab Irsyadul Murid
@@ -67,11 +67,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.4")
+implementation("com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.6")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-hisab-irsyadulmurid:5.0.4'
+implementation 'com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.6'
 ```
 ## Tutorial Youtube
 Praktik implementasi library hisab irsyadul murid
@@ -514,9 +514,11 @@ b.akhirUmbraWD
 // akhir penumbra
 b.akhirPenumbraWD
 
-// magnitudo penumbra
+// magnitude penumbra
 b.magnitudePenumbra
-// magnitude usbu', sebaiknya ubah ke DMS
+// magnitude umbra
+b.magnitudeUmbra
+// magnitude umbra usbu', sebaiknya ubah ke DMS
 b.magnitudeUsbu
 // durasi penumbra
 b.lamaPenumbra
