@@ -16,8 +16,8 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.andihasan97"
-version = "5.0.4"
+group = "com.github.hasanelfalakiy"
+version = "5.0.6"
 
 repositories {
     // Use Maven Central for resolving dependencies.
