@@ -82,7 +82,7 @@ Praktik implementasi library hisab irsyadul murid
 
 ## Cara menggunakan
 
-Sebagian besar nilai kembalian nya berupa Double, untuk merubah ke format derajat menit detik (DMS)/ jam menit detik (HMS) silahkan gunakan library konversi yang sudah saya buat disini : https://github.com/andihasan97/lib-konversi
+Sebagian besar nilai kembalian nya berupa Double, untuk merubah ke format derajat menit detik (DMS)/ jam menit detik (HMS) silahkan gunakan library konversi yang sudah saya buat disini : https://github.com/hasanelfalakiy/lib-konversi
 
 1. Hisab Waktu Sholat
 ```kotlin.kt
