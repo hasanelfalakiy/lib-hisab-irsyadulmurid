@@ -37,7 +37,6 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     /*
     	jika vrFInt diantara 0 ~ 12 atau 168 ~ 192 atau 348 ~ 360, maka mungkin terjadi gerhana bulan
     */
-    
     val statusGB =
     	when (vrFInt) {
         	in 0..14 -> true // true = mungkin terjadi gerhana bulan
@@ -45,6 +44,7 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
             in 348..360 -> true
             else -> false // false = tidak terjadi gerhana bulan
         }
+        
     val vrJD = 2447740.651689 + 29.530588853 * vrK + 0.0001337 * (vrT).pow(2) - 0.00000015 * (vrT).pow(3) - (2.0 / 1700)
     val vrM = (207.9623868 + 29.10535669 * vrK + -0.0000218 * (vrT).pow(2)).mod(360.0)
     val vrM1 = (111.1797657 + 385.81693528 * vrK + 0.0107438 * (vrT).pow(2) + 0.00001239 * (vrT).pow(3)).mod(360.0)
@@ -129,7 +129,14 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     val vrR = 0.4678 - vrU
     val vrN = 0.5458 + 0.0400 * cos(Math.toRadians(vrM1))
     
-    // Miqdarul Khusuf/Besar Gerhana
+    /*
+    * Magnitude Penumbra
+    *
+    * karena dikitab Irsyadul Murid rumus mag. penumbra tidak ada maka saya ambil
+    * dari kitab Tsimarul Murid karya K. Ali Mustofa Maesan Kediri
+    */
+    val vrMPenumb = (1.5573 + vrU - abs(vry)) / 0.5450
+    // Miqdarul Khusuf/Mag. Umbra
     val vrMG = (1.0128 - vrU - abs(vry)) / 0.5450
     // Miqdarul Khusuf/Besar Gerhana Usbu'
     val vrMGUsbu = vrMG * 12
@@ -138,11 +145,15 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
         jika kurang dari 1, maka gerhana sebagian
         jika kurang dari 0, maka penumbra
     */
-    val jenisGerhana = when {
-    	vrMG >= 1 -> "Total"
-        vrMG < 1 && vrMG > 0 -> "Sebagian/Partial"
-        vrMG < 0 && vrMG > -1 -> "Penumbra"
-        else -> "Tidak ada Gerhana Bulan"
+    val jenisGerhana = if (statusGB == true) {
+        when {
+            vrMG >= 1 -> "Total"
+            vrMG < 1 && vrMG > 0 -> "Sebagian/Partial"
+            vrMG < 0 && vrMG > -1 -> "Penumbra"
+            else -> "Tidak ada Gerhana"
+        }
+    } else {
+        "Tidak ada Gerhana"
     }
     // vrt1 untuk jam masuk penumbra
     val vrt1 = if (statusGB == true) {
@@ -245,10 +256,24 @@ class IrsyadGerhanaBulan(val month: Int, val year: Int, val timeZone: Number) {
     	00.0
     }
     
-    // magnitudo penumbra
-    val magnitudePenumbra = vrMG
+    // magnitude penumbra
+    val magnitudePenumbra = if (statusGB == true) {
+    	vrMPenumb
+    } else {
+    	00.0
+    }
+    // magnitude umbra
+    val magnitudeUmbra = if (vrMG < 0) {
+    	00.0
+    } else {
+    	vrMG
+    }
     // magnitude usbu'
-    val magnitudeUsbu = vrMGUsbu
+    val magnitudeUsbu = if (vrMG < 0) {
+    	00.0
+    } else {
+    	vrMGUsbu
+    }
     // durasi penumbra
     val lamaPenumbra = (vrT0 + vrt1) - (vrT0 - vrt1)
     // durasi hakiki/umbra
