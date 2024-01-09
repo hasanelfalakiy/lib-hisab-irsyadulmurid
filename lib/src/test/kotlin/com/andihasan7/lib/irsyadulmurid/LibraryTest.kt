@@ -258,11 +258,11 @@ class LibraryTest {
     
     @Test
     fun testGerhanaBulan() {
-        val b = IrsyadGerhanaBulan(2, 1450, 7)
+        val b = IrsyadGerhanaBulan(3, 1447, 7)
     
         //val h = 0.0
         println(b.jenisGerhana)
-        println(b.vrMG)
+        println(b.vrFInt)
         //println(h)
         //println(toDegreeFullRound2(h))
         println("")
@@ -284,7 +284,8 @@ class LibraryTest {
         println("akhir umbra    : ${toDegreeFullRound2(b.akhirUmbraWD)}")
         println("akhir penumbra : ${toDegreeFullRound2(b.akhirPenumbraWD)}")
         println("")
-        println("magnitude penumbra : ${b.magnitudePenumbra}")
+        println("magnitude penumbra : ${(b.magnitudePenumbra).round(4)}")
+        println("magnitude umbra : ${(b.magnitudeUmbra).round(4)}")
         println("magnitude usbu' : ${toDegreeFullRound2(b.magnitudeUsbu)}")
         println("lama penumbra : ${toDegreeFullRound2(b.lamaPenumbra)}")
         println("lama umbra : ${toDegreeFullRound2(b.lamaUmbra)}")
