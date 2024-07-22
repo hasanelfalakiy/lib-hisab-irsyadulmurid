@@ -295,10 +295,10 @@ class LibraryTest {
     
     @Test
     fun testGerhanaMatahari() {
-        val s = IrsyadGerhanaMatahari(7, 1431, 7)
+        val s = IrsyadGerhanaMatahari(3, 1425, 7)
     
-        //val hs = s.vrt2
-        //println(hs)
+        val hs = s.vrFInt
+        println(hs)
         //println(toDegreeFullRound2(hs))
         println("status gerhana : ${s.statusGM}")
         println("jenis gerhana  : ${s.jenisGM}")
