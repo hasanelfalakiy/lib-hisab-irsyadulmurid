@@ -30,6 +30,7 @@ import kotlin.math.sin
 import kotlin.math.sqrt
 import kotlin.math.cos
 import kotlin.math.tan
+import kotlin.mod
 import com.andihasan7.lib.irsyadulmurid.round
 
 
@@ -185,6 +186,17 @@ class IrsyadSholat(
 	// Nishful Lail
     val tengahMalamWD = (maghribWD + ((shubuhWD + 24 - maghribWD) / 2) - ihthiyat).mod(24.0) // dikurangi ihthiyat karena sudah mengambil data maghrib dan shubuh yang sudah ditambah ihthiyat
 	
+	/**
+    * 2/3 malam lokal
+    */
+    val duaPer3MalamWD = ((((24 + shubuhWD - maghribWD) / 3.0) * 2 + maghribWD - 24) - ihthiyat).mod(24.0)
+    
+    /**
+    * 2/3 malam istiwa`
+    */
+    val duaPer3MalamWIS = duaPer3MalamWD + eq + (longitude - ((timeZone).toDouble() * 15)) / 15
+	
+	
 	// Arah Qiblat
     // lintang dan bujur Ka'bah'
     val lK = 21.42191389
@@ -275,8 +287,12 @@ class IrsyadSholat(
     
 	// Tengah Malam WD
 	fun tengahMalam(): Double = tengahMalamWD
-	
-	
+    
+    // 2/3 malam wd
+    fun duaPer3MalamWD(): Double = duaPer3MalamWD
+    
+    
+    
 	
 	// fungsi getDeklinasi
 	fun deklinasi(): Double = dek

@@ -100,6 +100,7 @@ class LibraryTest {
         println("Maghrib = ${toDegreeFullRound2(s.maghrib())}")
         println("Isya = ${toDegreeFullRound2(s.isya())}")
         println("T Malam = ${toDegreeFullRound2(s.tengahMalam())}")
+        println("2/3 Malam = ${toDegreeFullRound2(s.duaPer3MalamWD())}")
             
         println("Deklinasi = ${toDegreeFullRound2(s.deklinasi())}")
         println("EoT = ${toDegreeFullRound2(s.equationOfTime())}")
