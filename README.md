@@ -67,11 +67,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.6")
+implementation("com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.7")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.6'
+implementation 'com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.7'
 ```
 ## Tutorial Youtube
 Praktik implementasi library hisab irsyadul murid
@@ -135,6 +135,9 @@ fun isya(): Double
     
 // Tengah Malam WD
 fun tengahMalam(): Double
+
+// 2/3 Malam WD
+fun duaPer3MalamWD(): Double
 	
 // fungsi getDeklinasi
 fun deklinasi(): Double
