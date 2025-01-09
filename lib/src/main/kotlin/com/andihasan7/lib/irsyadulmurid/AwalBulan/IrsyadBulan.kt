@@ -287,7 +287,7 @@ class IrsyadBulan(
     // Perkiraan Awal Bulan
     // Jika T Hilal Mar'i Center lebih atau sama dengan 2, maka besok Bulan baru, jika tidak, maka 2 hari lagi
     val jdPrediksi =
-    	if (vrhcc >= 2) {
+    	if (vrhcc >= 3.0 && vrEL >= 6.4) {
         	vrJDIjtima + 1
         } else {
         	vrJDIjtima + 2
