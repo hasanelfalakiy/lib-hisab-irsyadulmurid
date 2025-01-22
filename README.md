@@ -67,11 +67,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.8")
+implementation("com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.9")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.8'
+implementation 'com.github.hasanelfalakiy:lib-hisab-irsyadulmurid:5.0.9'
 ```
 ## Tutorial Youtube
 Praktik implementasi library hisab irsyadul murid
