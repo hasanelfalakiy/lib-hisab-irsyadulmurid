@@ -138,7 +138,7 @@ class LibraryTest {
     @Test
     fun testSelamatan() {
     
-        val jd = 2453485.5
+        val jd = 2460676.5
     
         val s = Umum.selamatan(jd)
     

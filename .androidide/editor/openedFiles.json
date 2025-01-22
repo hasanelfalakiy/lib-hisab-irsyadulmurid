@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/Umum/Umum.kt",
+      "selection": {
+        "end": {
+          "column": 25,
+          "index": 1042,
+          "line": 30
+        },
+        "start": {
+          "column": 25,
+          "index": 1042,
+          "line": 30
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/test/kotlin/com/andihasan7/lib/irsyadulmurid/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 26,
+          "index": 5893,
+          "line": 140
+        },
+        "start": {
+          "column": 26,
+          "index": 5893,
+          "line": 140
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/lib-hisab-irsyadulmurid/lib/src/main/kotlin/com/andihasan7/lib/irsyadulmurid/Umum/Umum.kt"
+}
