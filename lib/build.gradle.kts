@@ -17,7 +17,7 @@ plugins {
 }
 
 group = "com.github.hasanelfalakiy"
-version = "5.0.8"
+version = "5.0.9"
 
 repositories {
     // Use Maven Central for resolving dependencies.
