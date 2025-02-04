@@ -23,6 +23,43 @@ import kotlin.math.floor
 object TarikhToJD {
 
 	// fungsi mengubah tarikh miladi ke Julian Day (JD)
+    fun miladiToJD(
+        date: Int,
+        month: Int,
+        year: Int,
+        hourDouble: Double = 0.0,
+        timeZone: Double = 0.0
+    ): Double {
+        var m: Double
+        var y: Double
+        var a: Double
+        var b: Double
+    
+        val d = date + ((hourDouble - timeZone) / 24.0)
+    
+        if (month > 2) {
+            m = month.toDouble()
+            y = year.toDouble()
+        } else {
+            m = (month + 12).toDouble()
+            y = (year - 1).toDouble()
+        }
+    
+        val _j = (year.toDouble() + month.toDouble() / 100 + date.toDouble() / 10000)
+        if (_j >= 1582.1015) {
+            a = floor(y / 100)
+            b = 2 - a + floor(a / 4)
+        } else {
+            b = 0.0
+        }
+    
+        val jd = floor(365.25 * (y + 4716)) + floor(30.6001 * (m + 1)) + d + b - 1524.5
+    
+        return jd
+    }
+    
+    /*
+    rumus dari irsyadul murid ini terdapat bug/error jika menghitung 1 Jan 2200 M
 	fun miladiToJD(date: Int, month: Int, year: Int, hour: Double = 0.0, timeZone: Double = 0.0): Double {
     	
         date.toDouble()
@@ -55,6 +92,7 @@ object TarikhToJD {
         
         return vrJD
     }
+    */
     
     // fungsi mengubah tarikh hijriyah ke Julian Day (JD)
     fun hijriToJD(date: Int, month: Int, year: Int): Double {
