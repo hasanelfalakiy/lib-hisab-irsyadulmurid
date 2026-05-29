@@ -80,16 +80,15 @@ class LibraryTest {
     @Test
     fun testWaktuSholat() {
     
-        val tgl = 1
-        val m = 1
-        val th = 2024
+        val tgl = 29
+        val m = 5
+        val th = 2026
         val lt = -7.433333334
         val bj = 111.433333334
         val timez = 7
         val tinggi = 150
-        val ith = 2
             
-        val s = IrsyadSholat(tgl, m, th, lt, bj, timez, tinggi, ith)
+        val s = IrsyadSholat(tgl, m, th, lt, bj, timez, tinggi, 3, 2, 2, 2, 2, 2, 2)
             
         println("Imsak = ${toDegreeFullRound2(s.imsak())}")
         println("Shubuh = ${toDegreeFullRound2(s.shubuh())}")

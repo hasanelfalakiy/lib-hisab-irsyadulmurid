@@ -42,11 +42,18 @@ class IrsyadSholat(
     val longitude: Double,
     val timeZone: Number,
     val elevation: Number,
-    val ihthiyati: Int
+    val ihtiyatZuhur: Int = 0,
+    val ihtiyatAsar: Int = 0,
+    val ihtiyatMaghrib: Int = 0,
+    val ihtiyatIsya: Int = 0,
+    val ihtiyatShubuh: Int = 0,
+    val ihtiyatTerbit: Int = 0,
+    val ihtiyatDluha: Int = 0,
+    val hAltIsya: Double = -18.0,
+    val hAltShubuh: Double = -20.0,
+    val metodeAsar: Boolean = true,
+    val isUseDip: Boolean = true,
     ) {
-    
-    
-	val ihthiyat = (ihthiyati).toDouble() / 60
 	
 	// koreksi bulan & tahun
 	var bulan = if (month < 3) {
@@ -123,13 +130,14 @@ class IrsyadSholat(
 	*/
 	
 	// Dzuhur
-    val dzuhurWD = 12 - eq + (((timeZone).toDouble() * 15) - longitude) / 15 + ihthiyat
+    val dzuhurWD = 12 - eq + (((timeZone).toDouble() * 15) - longitude) / 15 + (ihtiyatZuhur.toDouble() / 60)
 	
 	// Ashar
-    val hAshar = Math.toDegrees(atan(1.0 / (tan(Math.toRadians(abs(latitude - dek))) + 1)))
+    val asrShadowFactor = if (metodeAsar) 1 else 2
+    val hAshar = Math.toDegrees(atan(1.0 / (tan(Math.toRadians(abs(latitude - dek))) + asrShadowFactor)))
 	val f = -tan(Math.toRadians(latitude)) * tan(Math.toRadians(dek))
 	val gE = cos(Math.toRadians(latitude)) * cos(Math.toRadians(dek))
-	val aS = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hAshar)) / gE)) / 15 + ihthiyat // Ashar Istiwa'
+	val aS = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hAshar)) / gE)) / 15 + (ihtiyatAsar.toDouble() / 60) // Ashar Istiwa'
 	val asharWD = aS - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
 	// Maghrib
@@ -146,50 +154,56 @@ class IrsyadSholat(
             )
         }
     // ho Maghrib
-    val hM = -(sd + (34.5 / 60) + dip) - 0.0024
+    val useDip = if (isUseDip) dip else 0.0
+    val hM = -(sd + (34.5 / 60) + useDip) - 0.0024
     // Maghrib WD
-    val tM = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hM)) / gE)) / 15 + ihthiyat
+    val tM = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hM)) / gE)) / 15 + (ihtiyatMaghrib.toDouble() / 60)
+
     // Maghrib WD
     val maghribWD = tM - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
-	
-	// Isya'
-    val hI = -18.0
+    // Maghrib WD tanpa ihtiyat
+    val maghribWDWithoutIhtiyat = maghribWD - (ihtiyatMaghrib.toDouble() / 60)
+
+    // Isya'
     // Isya' WIS
-    val iS = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hI)) / gE)) / 15 + ihthiyat 
+    val iS = 12 + Math.toDegrees(acos(f + sin(Math.toRadians(hAltIsya)) / gE)) / 15 + (ihtiyatIsya.toDouble() / 60)
 	// Isya' WD
     val isyaWD = iS - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
 	// h Shubuh
-    val hS = -20.0
     // Shubuh WIS
-    val sI = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hS)) / gE)) / 15 + ihthiyat
+    val sI = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hAltShubuh)) / gE)) / 15 + (ihtiyatShubuh.toDouble() / 60)
     // Shubuh WD
     val shubuhWD = sI - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
-	
-	// Imsak
+
+    // Shubuh WD tanpa ihtiyat
+    val shubuhWDWithoutIhtiyat = shubuhWD - (ihtiyatShubuh.toDouble() / 60)
+
+    // Imsak
     val imsakWD = shubuhWD - (10.0 / 60)
 	
 	// h Thulu'
-    val hT = -(sd + (34.5 / 60) + dip) - 0.0024
     // Thulu' WIS
-    val tI = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hT)) / gE)) / 15 - ihthiyat // Ihthiyat untuk Thulu' dikurangi 2 menit
+    val tI = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hM)) / gE)) / 15 - (ihtiyatTerbit.toDouble() / 60) // Ihthiyat untuk Thulu' dikurangi 2 menit
     // Thulu' WD
     val thuluWD = tI - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
+    // thulu' WD tanpa ihtiyat
+    val thuluWDWithoutIhtiyat = thuluWD + (ihtiyatTerbit.toDouble() / 60)
 	
 	// Dluha
     val hD = 4.5
     // Dluha WIS
-    val dL = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hD)) / gE)) / 15 + ihthiyat
+    val dL = 12 - Math.toDegrees(acos(f + sin(Math.toRadians(hD)) / gE)) / 15 + (ihtiyatDluha.toDouble() / 60)
     // Dluha WD
     val dluhaWD = dL - eq - (longitude - ((timeZone).toDouble() * 15)) / 15
 	
 	// Nishful Lail
-    val tengahMalamWD = (maghribWD + ((shubuhWD + 24 - maghribWD) / 2) - ihthiyat).mod(24.0) // dikurangi ihthiyat karena sudah mengambil data maghrib dan shubuh yang sudah ditambah ihthiyat
+    val tengahMalamWD = (maghribWDWithoutIhtiyat + ((shubuhWDWithoutIhtiyat + 24 - maghribWDWithoutIhtiyat) / 2)).mod(24.0)
 	
 	/**
     * 2/3 malam lokal
     */
-    val duaPer3MalamWD = ((((24 + shubuhWD - maghribWD) / 3.0) * 2 + maghribWD - 24) - ihthiyat).mod(24.0)
+    val duaPer3MalamWD = ((((24 + shubuhWDWithoutIhtiyat - maghribWDWithoutIhtiyat) / 3.0) * 2 + maghribWDWithoutIhtiyat - 24)).mod(24.0)
     
     /**
     * 2/3 malam istiwa`
